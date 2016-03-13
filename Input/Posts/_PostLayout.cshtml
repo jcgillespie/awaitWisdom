@@ -1,0 +1,39 @@
+@{
+    Layout = "_Layout.cshtml";
+    var Title = Model.String("Title");
+    var Lead = Model.String("Lead");
+    var Published = Model.Get<DateTime>("Published");
+    var Edited = Model.Get<DateTime>("Edited");        
+    var Page = System.IO.Path.GetFileNameWithoutExtension(Model.String("RelativeFilePath"));
+    var Tags = Model.Get<string[]>("Tags");
+}
+@section Header {
+    <div class="Page-head">
+        <h1>@Title</h1>
+        @if(!string.IsNullOrWhiteSpace(Lead))
+        {
+            <h2 class="subheading">@Lead</h2>
+        }            
+        <div class="meta">        
+            @if (Published != default(DateTime))
+            {
+                <text>Published on @Published.ToLongDateString()<br></text>
+            }
+            @if (Edited != default(DateTime))
+            {
+                <text>Edited on @Edited.ToLongDateString()</text>
+            }
+        </div>
+        @if (Tags != null)
+        {
+            <div class="tags">
+                @foreach (string tag in Tags.OrderBy(x => x))
+                {
+                    <text>@tag</text>
+                }
+            </div>     
+        } 
+    </div>
+}
+
+@RenderBody()

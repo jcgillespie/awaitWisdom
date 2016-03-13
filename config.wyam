@@ -1,0 +1,43 @@
+FileSystem.InputPaths[0] = "Input";
+FileSystem.OutputPath = "Output";
+==============
+
+Pipelines.Add("Posts",
+	ReadFiles(@"Posts\*.md"),  // Read all markdown files in the "posts" directory
+	FrontMatter(Yaml()),  // Load any frontmatter and parse it as YAML markup
+	Markdown(),  // Render the markdown content
+	Concat(
+		ReadFiles(@"Posts\*.cshtml").Where(x => Path.GetFileName(x)[0] != '_' && Path.GetFileName(x) != "Index.cshtml"),
+		FrontMatter(Yaml())		
+	),
+	Razor(),  // Compile and render the page template
+	Excerpt(),
+//	Excerpt("div#post-content")
+//		.SetMetadataKey("PostContent")
+//		.GetOuterHtml(false),
+	WriteFiles(@".html")  // Write the post file 
+);
+
+Pipelines.Add("Home",
+    ReadFiles(@"*.md").Where(x => !Path.GetDirectoryName(x).EndsWith(@"Posts")),
+	FrontMatter(Yaml()),
+	Markdown(),
+    Concat(
+        ReadFiles(@"*.cshtml")
+            .FromTopDirectoryOnly()
+            .Where(x => System.IO.Path.GetFileName(x)[0] != '_'),
+		FrontMatter(Yaml())		
+	),
+	Razor(),
+	WriteFiles(@".html")
+);
+
+Pipelines.Add("Less",
+    ReadFiles("theme.less"),
+    Less(),
+    WriteFiles(@".css")
+);
+
+Pipelines.Add("Resources",
+	CopyFiles("*").WithoutExtensions(".cshtml", ".md", ".less")
+);

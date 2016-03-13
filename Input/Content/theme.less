@@ -1,0 +1,125 @@
+// Styles for Top nav
+#top-nav {
+    background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    height: 2.1em;
+    overflow: hidden;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+    color:#FFFFFF;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+#top-nav a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+#top-nav nav {
+    position: relative;
+}
+
+#top-nav.open {
+    height: 9.5em;
+}
+
+.nav-menu {
+    text-align: right;
+}
+
+.nav-toggle {
+    width: 34px;
+    height: 34px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.nav-toggle .bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 18px;
+    right: 7px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    background: #FFFFFF;
+}
+
+.nav-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.nav-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.nav-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#top-nav .pure-menu-link{
+    color:#FFFFFF;
+}
+
+@media (max-width: 47.999em) {
+    #top-nav {
+        background-color: #333333;
+    }
+    .nav-menu {
+        text-align: left;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+// end styles for top nav
+// Page header styles
+.page-head {
+    margin:0;
+    background: no-repeat url(/content/cursor.jpg);
+    background-size: cover;
+    color:#FFFFFF;
+    text-align: center;
+    padding: 75px 0;
+}
+//
+
+#site-footer {
+    bottom: 0;
+    position: relative;
+    margin: 8rem 0 0 0;
+    padding: 4rem 0;
+    border-top: #EBF2F6 1px solid;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.7em;
+    color: #BBC7CC;
+    text-align: center;
+    background: #F7FAFB;
+}
+
+#site-footer a {
+    color: #BBC7CC;
+}
