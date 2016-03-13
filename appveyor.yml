@@ -21,7 +21,7 @@ build_script:
   - ps: Get-ChildItem | Select Name, Mode
   - ..\Wyam\Wyam.exe
   - ps: Get-ChildItem | Select Name, Mode
-  - ps: Move-Item .\Output ..\Output -Verbose # move the output outside of the git branch folder
+  - ps: Move-Item .\Output ..\ -Verbose # move the output outside of the git branch folder
   - ps: Get-ChildItem ..\Output | Select Name, Mode
 
 on_success:
