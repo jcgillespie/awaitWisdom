@@ -9,8 +9,8 @@ environment:
 install:
   - mkdir ..\Wyam
   - mkdir ..\Output
-  # Fetch the latest version of Wyam 
-  - "curl.exe -s https://raw.githubusercontent.com/Wyamio/Wyam/master/RELEASE -o ..\\Wyam\\wyamversion.txt"
+  # Fetch the latest version of Wyam
+  - curl -FsSL -o ..\\Wyam\\wyamversion.txt https://raw.githubusercontent.com/Wyamio/Wyam/master/RELEASE
   - set /P WYAMVERSION=< ..\Wyam\wyamversion.txt
   - echo %WYAMVERSION%
   # Get and unzip the latest version of Wyam
