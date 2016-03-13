@@ -1,8 +1,6 @@
 branches:
   only:
     - master
-   except:
-    - gh-pages
 
 environment:
   access_token:
