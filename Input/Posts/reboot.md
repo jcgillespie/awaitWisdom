@@ -16,4 +16,4 @@ After several half-hearted attempts to reboot, I've finally found the drive and 
 
 I'm also taking this opportunity to fight my own inclination and practice what I preach by launching an imperfect, in progress blog. Rather than wait (probably forever) until I have a perfect site, I'll launch the bare minimum and iterate.  This post is the [Minimum Viable Product](https://en.wikipedia.org/wiki/Minimum_viable_product). The style is still ugly and there is functionality missing, but if you're reading this then I've done enough to launch.
 
-I think imperfect and improving is better than the dead blog this replaced.
+I think imperfect and improving is better than the dead blog this replaced. Check back for progress!

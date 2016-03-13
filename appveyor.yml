@@ -10,7 +10,7 @@ install:
   - mkdir ..\Wyam
   - mkdir ..\Output
   # Fetch the latest version of Wyam 
-  - "curl -s https://raw.githubusercontent.com/Wyamio/Wyam/master/RELEASE -o ..\\Wyam\\wyamversion.txt"
+  - "curl.exe -s https://raw.githubusercontent.com/Wyamio/Wyam/master/RELEASE -o ..\\Wyam\\wyamversion.txt"
   - set /P WYAMVERSION=< ..\Wyam\wyamversion.txt
   - echo %WYAMVERSION%
   # Get and unzip the latest version of Wyam
@@ -21,7 +21,7 @@ build_script:
   - ..\Wyam\Wyam.exe --output ..\Output
 
 on_success:
-  #  - del Input\_._  # Not sure where this one is coming from, but it needs to be deleted before checkout
+   - del Input\_._  # Not sure where this one is coming from, but it needs to be deleted before checkout
   # Switch branches to gh-pages, clean the folder, copy everything in from the Wyam output, and commit/push
   # See http://www.appveyor.com/docs/how-to/git-push for more info
   - git config --global credential.helper store
@@ -32,7 +32,7 @@ on_success:
   - git rm -rf .
   - xcopy ..\Output . /E
   - echo blog.awaitWisdom.com > CNAME
-  - git remote set-url origin https://github.com/jcgillespie/jcgillespie.github.io.git
+  - git remote set-url origin https://github.com/jcgillespie/awaitWisdom.git
   - git add -A
   - git commit -a -m "Commit from AppVeyor"
   - git push
