@@ -3,7 +3,7 @@
     foreach (IDocument doc in docs)
     {
         string file = doc.String("RelativeFilePath").Replace("\\", "/");
-        string link = "Posts/" + System.IO.Path.GetFileNameWithoutExtension(file);
+        string link = "/Posts/" + System.IO.Path.GetFileNameWithoutExtension(file);
         string lead = doc.String("Lead");
         
         <div class="pure-u-1">
