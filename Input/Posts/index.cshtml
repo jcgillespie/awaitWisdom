@@ -1,0 +1,19 @@
+Title: Archive
+---
+@{
+    Layout = "_Layout.cshtml";
+}
+
+@{
+    foreach(IGrouping<int, IDocument> year in Documents
+        .Where(x => x.ContainsKey("Published") && x.Get<DateTimeOffset>("Published") <= System.DateTimeOffset.Now)
+        .OrderByDescending(x => x.Get<DateTimeOffset>("Published"))
+        .GroupBy(x => x.Get<DateTimeOffset>("Published").Year)
+        .OrderByDescending(x => x.Key))
+    {
+        <h1>@year.Key</h1>
+        <hr />
+        ViewData["PostListDocuments"] = year;
+        @Html.Partial("_PostList");
+    }
+}

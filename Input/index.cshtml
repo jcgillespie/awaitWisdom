@@ -14,14 +14,15 @@
                 .Take(5))
         {
             string file = doc.String("RelativeFilePath").Replace("\\", "/");
-            string link = "Posts/" + System.IO.Path.GetFileNameWithoutExtension (file);
-                
+            string link = "Posts/" + System.IO.Path.GetFileNameWithoutExtension(file);
+            string lead = doc.String("Lead");
+                            
             if (!first)
             {
                 <hr /> 
             }
             first = false;
-            string lead = doc.String("Lead");
+
             <div class="pure-u-1">
                 <a href="@link">
                     <h2>@doc.String("Title")</h2>

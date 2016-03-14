@@ -1,5 +1,6 @@
 Title: About Josh
-Published: 2014-02-25
+Created: 2014-02-25T00:24:35.5550000+00:00
+Published: 2014-02-25T02:17:01.6510000+00:00
 ---
 My name is Josh Gillespie. I live in St. Louis, Missouri with my wife and daughter. 
 ![San Diego Girls](/content/images/2014/Feb/SanDiegoGirls.jpg)

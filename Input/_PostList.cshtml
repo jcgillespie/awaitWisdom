@@ -3,18 +3,18 @@
     foreach (IDocument doc in docs)
     {
         string file = doc.String("RelativeFilePath").Replace("\\", "/");
-        string link = "/" + System.IO.Path.ChangeExtension(file, "EXT").Replace(".EXT", "");
+        string link = "Posts/" + System.IO.Path.GetFileNameWithoutExtension(file);
         string lead = doc.String("Lead");
         
-        <div class="post-list">
+        <div class="pure-u-1">
             <a href="@link">
-                <h3 class="post-title">@doc.String("Title")</h3>
+                <h3>@doc.String("Title")</h3>
                 @if(!string.IsNullOrWhiteSpace(lead))
                 {
-                    <h4 class="post-subtitle">@lead</h4>
+                    <h4>@lead</h4>
                 }
             </a>
-            <p class="post-meta">Posted on @(doc.Get<DateTime>("Published").ToLongDateString())</p>            
+            <p>Posted on @(doc.Get<DateTimeOffset>("Published").ToLocalTime().ToString("D"))</p>            
         </div>   
     }
 }
