@@ -1,5 +1,6 @@
 Title: St. Louis Days of .NET 2013
-Published: 2013-10-27
+Created: 2013-10-27T12:28:39.4870000+00:00
+Published: 2013-10-27T12:28:00.0000000+00:00
 ---
 <p>St. Louis Days of .NET (STLDODN) 2013 is fast approaching. <a href="http://polarissolutions.com">Polaris Solutions</a> is a <a href="">sponsor</a> this year and I'll be presenting there with two of my colleagues.</p>
 

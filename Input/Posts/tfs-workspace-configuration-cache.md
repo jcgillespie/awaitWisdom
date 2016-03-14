@@ -1,5 +1,6 @@
 Title: TFS Workspace configuration cache
-Published: 2013-12-13
+Created: 2013-12-13T19:39:13.4220000+00:00
+Published: 2013-12-13T21:09:32.7190000+00:00
 ---
 I have a client that recently upgraded their Team Foundation Server 2012 to 2013 and moved to new hardware in the process. Their TFS 2012 instance has been decommissioned and they hit a small workspace snag.
 

@@ -1,5 +1,6 @@
 Title: A Quick Introduction to Web Publish Profiles
-Published: 2013-12-20
+Created: 2013-12-20T18:17:19.1670000+00:00
+Published: 2013-12-20T18:25:17.2230000+00:00
 Tags: 
  - Web Deploy
  - MSBuild

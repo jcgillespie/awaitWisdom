@@ -12,9 +12,6 @@ Pipelines.Add("Posts",
 	),
 	Razor(),  // Compile and render the page template
 	Excerpt(),
-//	Excerpt("div#post-content")
-//		.SetMetadataKey("PostContent")
-//		.GetOuterHtml(false),
 	WriteFiles(@".html")  // Write the post file 
 );
 

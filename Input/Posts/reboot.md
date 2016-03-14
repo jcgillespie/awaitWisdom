@@ -1,5 +1,6 @@
 Title: Reboot MVP
-Published: 2016-03-12
+Created: 2016-03-11T18:28:06.8820000+00:00
+Published: 2016-03-12T18:00:00.0000000+00:00
 Tags: 
  - Blogging
  - Meta

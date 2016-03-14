@@ -1,5 +1,6 @@
 Title: Test Lab Management in Windows Azure
-Published: 2014-03-17
+Created: 2014-03-17T14:33:55.3320000+00:00
+Published: 2014-03-17T14:34:04.3640000+00:00
 Tags: 
  - Polaris Solutions
 ---

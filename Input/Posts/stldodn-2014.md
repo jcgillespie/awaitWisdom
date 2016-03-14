@@ -1,5 +1,6 @@
 Title: St. Louis Days of .NET 2014
-Published: 2014-08-28
+Created: 2014-08-28T19:18:52.6820000+00:00
+Published: 2014-08-28T19:19:31.7940000+00:00
 Tags: 
  - Presentations
  - STLDODN

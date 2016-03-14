@@ -1,8 +1,38 @@
 @section Header {
 <div class="page-head">
     <h1>Welcome!</h1>
-    <span class="subheading">My name is Josh.</span>
+    <span class="subheading">My name is Josh. and I'm here to help.</span>
 </div>
 }
-
-<p>My name is Josh, and I'm here to help</p>
+<div class="pure-g">
+    @{
+        bool first = true;
+    
+        @foreach(IDocument doc in Documents
+                .Where(x => x.ContainsKey("Published") && x.Get<DateTimeOffset>("Published") <= System.DateTimeOffset.Now)
+                .OrderByDescending(x => x.Get<DateTimeOffset>("Published"))
+                .Take(5))
+        {
+            string file = doc.String("RelativeFilePath").Replace("\\", "/");
+            string link = "Posts/" + System.IO.Path.GetFileNameWithoutExtension (file);
+                
+            if (!first)
+            {
+                <hr /> 
+            }
+            first = false;
+            string lead = doc.String("Lead");
+            <div class="pure-u-1">
+                <a href="@link">
+                    <h2>@doc.String("Title")</h2>
+                    @if(!string.IsNullOrWhiteSpace(lead))
+                    {
+                        <h3>@lead</h3>
+                    }
+                </a>
+                <p>Posted on @(doc.Get<DateTimeOffset>("Published").ToLocalTime().ToString("D"))</p>
+                @Html.Raw(doc.String("Excerpt"))             
+            </div>       
+        }
+    }
+</div>

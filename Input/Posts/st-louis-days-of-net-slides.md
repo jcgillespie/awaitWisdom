@@ -1,5 +1,6 @@
 Title: St. Louis Days of .NET Slides
-Published: 2013-11-16
+Created: 2013-11-16T17:27:27.3660000+00:00
+Published: 2013-11-16T18:00:00.0000000+00:00
 ---
 Thanks to everyone who attended my talks this weekend. The slides for my [STLDODN talks](http://www.stldodn.com/2013/speakers/josh-gillespie) are up on [SlideShare](http://www.slideshare.net/JoshGillespie2) and the demo code is at  [GitHub]( https://github.com/jcgillespie/Demos)
 
