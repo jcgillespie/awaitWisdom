@@ -1,6 +1,7 @@
 Title: Reboot MVP
 Created: 2016-03-11T18:28:06.8820000+00:00
 Published: 2016-03-12T18:00:00.0000000+00:00
+Edited: 2016-03-15T00:07:15.8289788-05:00
 Tags: 
  - Blogging
  - Meta
@@ -15,6 +16,6 @@ I enjoyed blogging, but I didn't enjoy all maintenance pains I encountered with 
 
 After several half-hearted attempts to reboot, I've finally found the drive and the time to start building something new. I'm a slow learner, as I'm still using the blog as an opportunity to learn new things in addition to writing, but at least I'm learning, right?
 
-I'm also taking this opportunity to fight my own inclination and practice what I preach by launching an imperfect, in progress blog. Rather than wait (probably forever) until I have a perfect site, I'll launch the bare minimum and iterate.  This post is the [Minimum Viable Product](https://en.wikipedia.org/wiki/Minimum_viable_product). The style is still ugly and there is functionality missing, but if you're reading this then I've done enough to launch.
+I'm also using this chance to fight my own inclinations and instead practice what I preach by launching an imperfect, in progress blog. Rather than wait (probably forever) until I have a perfect site, I'll launch the bare minimum and iterate.  This post is the [Minimum Viable Product](https://en.wikipedia.org/wiki/Minimum_viable_product). The style is still ugly and there is functionality missing, but if you're reading this then I've done enough to launch.
 
-I think imperfect and improving is better than the dead blog this replaced. Check back for progress!
+I think imperfect and improving is better than the dead blog it replaces. Check back for progress!
