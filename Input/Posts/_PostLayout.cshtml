@@ -8,7 +8,7 @@
     var Tags = Model.Get<string[]>("Tags");
 }
 @section Header {
-    <div class="Page-head">
+    <div class="page-head">
         <h1>@Title</h1>
         @if(!string.IsNullOrWhiteSpace(Lead))
         {
@@ -17,11 +17,11 @@
         <div class="meta">        
             @if (Published != default(DateTime))
             {
-                <text>Published on @Published.ToLongDateString()<br></text>
+                <span>Published on @Published.ToLongDateString()</span><br />
             }
             @if (Edited != default(DateTime))
             {
-                <text>Edited on @Edited.ToLongDateString()</text>
+                <span>Edited on @Edited.ToLongDateString()</span>
             }
         </div>
         @if (Tags != null)
