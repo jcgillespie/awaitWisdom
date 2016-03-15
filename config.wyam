@@ -18,7 +18,15 @@ Pipelines.Add("Posts",
 	),
 	Razor(),  // Compile and render the page template
 	Excerpt(),
-	WriteFiles(@".html")  // Write the post file 
+	WriteFiles(@".html"),  // Write the post file
+    Rss(siteRoot: "http://blog.awaitWisdom.com",
+        outputRssFilePath: "feed.rss",
+        feedTitle: "await Wisdom()",
+        feedDescription: "Just a blog"
+    )
+        .WithPublicationDateMetaKey("Published")
+        .WithTitleMetaKey("Title"),
+    WriteFiles() 
 );
 
 Pipelines.Add("Home",
