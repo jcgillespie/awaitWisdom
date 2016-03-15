@@ -20,10 +20,11 @@ Pipelines.Add("Posts",
 	Excerpt(),
 	WriteFiles(@".html"),  // Write the post file
     Rss(siteRoot: "http://blog.awaitWisdom.com",
-        outputRssFilePath: "feed.rss",
+        outputRssFilePath: "rss",
         feedTitle: "await Wisdom()",
         feedDescription: "Just a blog"
     )
+        .WithLanguage("en-us")
         .WithPublicationDateMetaKey("Published")
         .WithTitleMetaKey("Title"),
     WriteFiles() 
