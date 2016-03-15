@@ -1,11 +1,5 @@
 FileSystem.InputPaths[0] = "Input";
 FileSystem.OutputPath = "Output";
-
-
-Assemblies
-    .Load("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")
-    .Load("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-    
 ==============
 
 Pipelines.Add("Posts",
@@ -19,15 +13,20 @@ Pipelines.Add("Posts",
 	Razor(),  // Compile and render the page template
 	Excerpt(),
 	WriteFiles(@".html"),  // Write the post file
-    Rss(siteRoot: "http://blog.awaitWisdom.com",
-        outputRssFilePath: "rss",
-        feedTitle: "await Wisdom()",
-        feedDescription: "Just a blog"
-    )
-        .WithLanguage("en-us")
-        .WithPublicationDateMetaKey("Published")
-        .WithTitleMetaKey("Title"),
-    WriteFiles() 
+    Branch(
+        OrderBy((d,c)  => d.Get<DateTimeOffset>("Published")).Descending(true),
+        Rss(    siteRoot: "http://blog.awaitWisdom.com",
+                outputRssFilePath: "feed.rss",
+                feedTitle: "await Wisdom()",
+                feedDescription: "Just a blog"
+            )
+            .WithLanguage("en-us")
+            .WithPublicationDateMetaKey("Published")
+            .WithTitleMetaKey("Title")
+            .WithDescriptionMetaKey("Description")
+            .WithLinkCustomizer((link) => link.EndsWith("/index.html") ? link.Substring(0, link.IndexOf("/index.html")) : link),
+        WriteFiles()
+    ) 
 );
 
 Pipelines.Add("Home",
