@@ -10,3 +10,6 @@ So, to me, "await wisdom" means I can't put things on hold and wait for wisdom t
 
 await Wisdom() is my place to share my experiences, both professional and personal. These experiences may be things I've learned, problems I'm facing, or even just rants. I hope you'll find something useful here.
 
+[About Josh](/about-josh)
+
+[About Polaris Solutions](/about-polaris-solutions)
