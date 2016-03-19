@@ -4,6 +4,8 @@ Published: 2014-09-02T12:50:57.1940000+00:00
 Tags: 
  - ALM
  - TFS
+ - Tech
+ - Migrated
 ---
 [TFS Team Web Access (TWA)][MSDNTWA] is a great tool for low-friction access to the development process. It has improved by leaps and bounds in the last few releases, but what if you want even more? Maybe you've seen vendors with products that augment TWA and wondered how you can do it yourself. Or maybe you're like me and just like to tinker for curiosity's sake.
 

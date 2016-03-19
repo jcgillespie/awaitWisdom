@@ -5,6 +5,8 @@ Tags:
  - Deployment
  - MSDeploy
  - Web Publish Series
+ - Tech
+ - Migrated
 ---
 When you create a publish profile, you may notice that there is an option to replace the connection string on the Settings tab.
 ![Publish dialog settings tab](/content/images/2013/Dec/PublishSettings.PNG)

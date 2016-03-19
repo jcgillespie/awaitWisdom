@@ -4,6 +4,9 @@ Published: 2014-08-28T19:19:31.7940000+00:00
 Tags: 
  - Presentations
  - STLDODN
+ - Speaking
+ - Tech
+ - Migrated
 ---
 It's that time of year again! With kids back in school and the Labor Day weekend approaching, summer is effectively over and the St. Louis Days of .NET (STLDODN) conference is approaching once again!
 

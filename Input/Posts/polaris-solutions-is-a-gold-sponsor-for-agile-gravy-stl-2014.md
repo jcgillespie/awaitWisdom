@@ -4,6 +4,8 @@ Published: 2014-02-28T23:01:31.1100000+00:00
 Tags: 
  - Polaris Solutions
  - news
+ - Tech
+ - Migrated
 ---
 We’re proud to announce that we just signed on as a Gold sponsor for the first annual [Agile Gravy St. Louis](http://agilegravy.com/) conference – a rich & savory 1-day Agile conference experience that’s worth soaking up every last drop. Early bird registration is $99.
 

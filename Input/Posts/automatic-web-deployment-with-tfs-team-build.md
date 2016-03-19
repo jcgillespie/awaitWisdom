@@ -2,6 +2,8 @@ Title: Automatic Web Deployment with TFS Team Build
 Created: 2013-12-20T18:28:40.7510000+00:00
 Published: 2014-03-01T00:59:04.1660000+00:00
 Tags: 
+ - Tech
+ - Migrated
  - Web Deploy
  - MSBuild
  - MSDeploy

@@ -3,6 +3,8 @@ Created: 2014-03-17T14:33:55.3320000+00:00
 Published: 2014-03-17T14:34:04.3640000+00:00
 Tags: 
  - Polaris Solutions
+ - Tech
+ - Migrated
 ---
 I was fortunate to be involved in some of the development of these tools. Really neat set of solutions.
 ![Lab management beaker image](http://polarissolutions.com/Blog/image.axd?picture=%2f2014%2f03%2fbeaker.png)

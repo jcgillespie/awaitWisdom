@@ -3,6 +3,8 @@ Created: 2014-03-11T02:00:54.5030000+00:00
 Published: 2014-03-22T03:22:59.6480000+00:00
 Tags: 
  - ALM
+ - Tech
+ - Migrated
 ---
 I recently heard a podcast where [David Chappell][DavidChappell] said something that piqued my interest. Paraphrasing, his thinking went something like this.
 

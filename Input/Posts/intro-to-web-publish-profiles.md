@@ -6,6 +6,8 @@ Tags:
  - MSBuild
  - MSDeploy
  - Web Publish Series
+ - Tech
+ - Migrated
 ---
 Deployment used to be a big hassle. Copy/Paste to UNC folder paths. XCopy in the command line. Batch scripts to string them together. Error prone, brittle, and annoying. 
 
