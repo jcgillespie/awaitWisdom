@@ -6,6 +6,7 @@
     var Edited = Model.Get<DateTime>("Edited");        
     var Page = System.IO.Path.GetFileNameWithoutExtension(Model.String("RelativeFilePath"));
     var Tags = Model.Get<string[]>("Tags");
+    var tagString = string.Join(", ", Tags.OrderBy(x => x).ToArray());
 }
 @section Header {
     <div class="page-head">
@@ -27,10 +28,7 @@
         @if (Tags != null)
         {
             <div class="tags">
-                @foreach (string tag in Tags.OrderBy(x => x))
-                {
-                    <text>@tag</text>
-                }
+                @tagString
             </div>     
         } 
     </div>
