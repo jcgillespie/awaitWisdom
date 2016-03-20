@@ -26,7 +26,22 @@ Pipelines.Add("Posts",
             .WithDescriptionMetaKey("Description")
             .WithLinkCustomizer((link) => link.EndsWith("/index.html") ? link.Substring(0, link.IndexOf("/index.html")) : link),
         WriteFiles()
-    ) 
+    ),
+    Branch(
+        Where((d,c) => d.Get<string[]>("Tags", new string[0]).Any() && d.Get<string[]>("Tags").Contains("Tech")),
+        OrderBy((d,c)  => d.Get<DateTimeOffset>("Published")).Descending(true),
+        Rss(    siteRoot: "http://blog.awaitWisdom.com",
+                outputRssFilePath: "techfeed.rss",
+                feedTitle: "await Wisdom()",
+                feedDescription: "Just a blog"
+            )
+            .WithLanguage("en-us")
+            .WithPublicationDateMetaKey("Published")
+            .WithTitleMetaKey("Title")
+            .WithDescriptionMetaKey("Description")
+            .WithLinkCustomizer((link) => link.EndsWith("/index.html") ? link.Substring(0, link.IndexOf("/index.html")) : link),
+        WriteFiles()
+    )
 );
 
 Pipelines.Add("Home",
