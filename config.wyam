@@ -19,7 +19,7 @@ public static class Utilities
 Pipelines.Add("Posts",
 	ReadFiles(@"Posts\*.md"),  // Read all markdown files in the "posts" directory
 	FrontMatter(Yaml()),  // Load any frontmatter and parse it as YAML markup
-	Markdown(),  // Render the markdown content
+	Markdown().EscapeAt(true),  // Render the markdown content
 	Concat(
 		ReadFiles(@"Posts\*.cshtml").Where(x => Path.GetFileName(x)[0] != '_' && Path.GetFileName(x) != "Index.cshtml"),
 		FrontMatter(Yaml())		
@@ -61,7 +61,7 @@ Pipelines.Add("Posts",
 Pipelines.Add("Content",
     ReadFiles(@"*.md").Where(x => !Path.GetDirectoryName(x).EndsWith(@"Posts")),
 	FrontMatter(Yaml()),
-	Markdown(),
+	Markdown().EscapeAt(true),
     Concat(
         ReadFiles(@"*.cshtml")
             .Where(x => System.IO.Path.GetFileName(x)[0] != '_' && !Path.GetDirectoryName(x).EndsWith("Posts")),
