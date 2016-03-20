@@ -2,6 +2,20 @@ FileSystem.InputPaths[0] = "Input";
 FileSystem.OutputPath = "Output";
 ==============
 
+public static class Utilities 
+{
+    public static string GetTagLink(string tag)
+	{
+		if(tag.StartsWith("."))
+		{
+		    tag = tag.Substring(1);
+		}
+        
+		return @"Tags/" + tag.ToLowerInvariant().Replace(' ', '-');
+	}
+}
+
+--------------
 Pipelines.Add("Posts",
 	ReadFiles(@"Posts\*.md"),  // Read all markdown files in the "posts" directory
 	FrontMatter(Yaml()),  // Load any frontmatter and parse it as YAML markup
@@ -44,18 +58,33 @@ Pipelines.Add("Posts",
     )
 );
 
-Pipelines.Add("Home",
+Pipelines.Add("Content",
     ReadFiles(@"*.md").Where(x => !Path.GetDirectoryName(x).EndsWith(@"Posts")),
 	FrontMatter(Yaml()),
 	Markdown(),
     Concat(
         ReadFiles(@"*.cshtml")
-            .FromTopDirectoryOnly()
-            .Where(x => System.IO.Path.GetFileName(x)[0] != '_'),
+            .Where(x => System.IO.Path.GetFileName(x)[0] != '_' && !Path.GetDirectoryName(x).EndsWith("Posts")),
 		FrontMatter(Yaml())		
 	),
 	Razor(), 
 	WriteFiles(@".html")
+);
+
+Pipelines.Add("Tags",
+	ReadFiles(@"Tags\index.cshtml"),
+	FrontMatter(),
+	Execute(@ctx.Documents
+		.Where(x => x.ContainsKey("Published") && x.ContainsKey("Tags"))
+    	.SelectMany(x => x.Get<string[]>("Tags"))
+		.Distinct()
+		.Select(x => @ctx.GetDocument(@doc, new Dictionary<string, object>()
+		{ 
+		    { "Title", x },
+			{ "Tag", x }
+		}))),
+	Razor(),
+	WriteFiles( Utilities.GetTagLink(@doc.String("Tag")) + ".html")
 );
 
 Pipelines.Add("Less",

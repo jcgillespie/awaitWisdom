@@ -1,0 +1,18 @@
+Title: All Tags
+---
+@{    
+	var DocumentsByTag = Documents.ContainsKey("Published").ToLookup<string>("Tags");
+	string Tag = Model.Get<string>("Tag", null);
+    bool hasTag = Tag != null;
+}
+
+@if (hasTag)
+{
+    ViewData["PostListDocuments"] = DocumentsByTag[Tag].OrderByDescending(x => x.Get<DateTimeOffset>("Published"));
+    @Html.Partial("_PostList");
+    <hr />
+}
+@foreach (var tagDocuments in DocumentsByTag.OrderBy(x => x.Key))
+{
+    <a href="/@Utilities.GetTagLink(tagDocuments.Key)" class="pure-button"><span class="badge">@tagDocuments.Count()</span> @tagDocuments.Key</a>
+}
