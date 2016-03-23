@@ -22,11 +22,11 @@ Microsoft has a build system as part of the Team Foundation set of tools. The on
 
 TFS Team Build offers a lot of power and flexibility, but we can leverage the [publish profiles][Publish Profiles] I introduced earlier to deploy a website or web app with just a couple of parameters.
 
-###Create a build definition
+### Create a build definition
 Creating a TFS Team Build definition is pretty simple. Here is an extremely quick run through with just the bare minimum so we can get to the deployment part.
 1\. From the Team Explorer, go the the Builds tab (`Ctrl+0, B`) and click "New Build Definition".
 2\. On the General tab, give your build a name.
-![TFS Build Definition General Tab](/content/images/2014/Mar/Build_General_Tab.PNG)
+![TFS Build Definition General Tab](/Content/images/2014/Mar/Build_General_Tab.PNG)
 3\. On the Source Settings tab, select the source control folder that has your solution/web project. 
 4\. On the Process tab, pick your Build Process template (I'm using "TfvcTemplate.12.xaml". Select your project to build.
 
@@ -35,7 +35,7 @@ Creating a TFS Team Build definition is pretty simple. Here is an extremely quic
 Add `/p:DeployOnBuild=true;PublishProfile=<Publish Profile Name>`. The Publish Profile Name does NOT include the .pubxml.
 
 Here's what mine looked like 
-![TFS Build Definition Process Tab](/content/images/2014/Mar/Build_Process_Tab.PNG)
+![TFS Build Definition Process Tab](/Content/images/2014/Mar/Build_Process_Tab.PNG)
 
 That's it! A very simple build definition will get the job done.
 
@@ -46,7 +46,7 @@ That's it! A very simple build definition will get the job done.
 + Set up your web server for web deployment.
 + Using publishsettings files to publish to Azure (and other hosting providers)
 
-##References
+## References
 * [Publishing with MS Deploy][Chris Kadel]
 * [Microsoft Team Foundation Server][TFS]
 * [Visual Studio Online][VSOnline]

@@ -18,31 +18,31 @@ There is a lot of shiny goodness to be had in publish profiles, including publis
 ### Create a new profile
 I've got a vanilla File > New... > Project web application project. You can get to the publish dialog from the Build menu...
 
-![build menu publish option](/content/images/2013/Dec/BuildMenu.PNG)
+![build menu publish option](/Content/images/2013/Dec/BuildMenu.PNG)
  or the project context menu...
-![web application project context menu publish option](/content/images/2013/Dec/PublishDialog.PNG)
+![web application project context menu publish option](/Content/images/2013/Dec/PublishDialog.PNG)
 Which gets you access to the Publish dialog. We're going to start by creating a new publish profile, called "Dev".
-![Publish Web Dialog - adding a new profile](/content/images/2013/Dec/PublishDialogWindow.PNG)
+![Publish Web Dialog - adding a new profile](/Content/images/2013/Dec/PublishDialogWindow.PNG)
 
 ### Add connection details
-![Publish connection details](/content/images/2013/Dec/PublishConnection.PNG)
+![Publish connection details](/Content/images/2013/Dec/PublishConnection.PNG)
 For a complete breakdown of the options on this screen, see the references section below. I've selected "Web Deploy" and plugged in the relevant server/site details.
 
 ### Settings
 In the settings section you can select build configuration and publish options. Note that you can also configure Entity Framework Code First Migrations and connection string replacement here.  We'll come back to that in a future post.
 
-![Publish Settings Tab](/content/images/2013/Dec/PublishSettings.PNG)
+![Publish Settings Tab](/Content/images/2013/Dec/PublishSettings.PNG)
 
 ### Preview/Publish
 The Preview tab gives allows you to (optionally) see what would happen if you ran the deployment without changing anything. This is a good way to not only verify the settings, but see exactly what files the deployment sees as needing an update.
-![Publish Preview tab](/content/images/2013/Dec/PublishPreview.PNG)
+![Publish Preview tab](/Content/images/2013/Dec/PublishPreview.PNG)
 From here you can also click "Publish" to deploy, or "Close" will prompt you to save the profile.
 
 ## Project Changes
 So what did all this do to your project? If you expand the Properties folder, you'll see a new "PublishProfiles" folder.
-![New PublishProfiles folder](/content/images/2013/Dec/ProjectChanges.PNG)
+![New PublishProfiles folder](/Content/images/2013/Dec/ProjectChanges.PNG)
 If you open up that "Dev.pubxml" file, you'll find ordinary XML.
-![PubXml Snippet](/content/images/2013/Dec/pubxml.PNG)
+![PubXml Snippet](/Content/images/2013/Dec/pubxml.PNG)
 If you're accustomed to MSBuild project syntax, that XML will look familiar.
 
 Including the publish files in the project means it can be source controlled and everyone uses the same settings. Another dev pulling down this project will have the "Dev" publish settings already setup.

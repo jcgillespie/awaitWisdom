@@ -15,7 +15,7 @@ MTM has proven to be an invaluable tool to many enterprise testing organizations
 
 Leveraging the cloud to remove this burden from organizational IT staff is a natural solution.The demand for cloud based testing facilities from our customers has led us to create this unique offering that fully integrates on-premises testers with self-provisioned test infrastructure hosted in **Window Azure**.
 
-###Key Benefits:
+### Key Benefits:
 
 + No on-premises infrastructure necessary
 + No dependency on IT operations staff

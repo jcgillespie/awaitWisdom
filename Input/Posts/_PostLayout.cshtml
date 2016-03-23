@@ -10,10 +10,10 @@
 }
 @section Header {
     <div class="page-head">
-        <h1><pre>@Title</pre></h1>
+        <h1><code>@Title</code></h1>
         @if(!string.IsNullOrWhiteSpace(Lead))
         {
-            <h2 class="subheading"><pre>@Lead</pre></h2>
+            <h2 class="subheading"><code>@Lead</code></h2>
         }            
         <div class="meta">        
             @if (Published != default(DateTime))

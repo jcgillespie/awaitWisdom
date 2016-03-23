@@ -21,7 +21,7 @@ That's quite a statement. My kneejerk reaction was to take issue with the third 
 
 It took me more time than I'd care to admit that I missed the point. I was hung up on the wording and dismissed the core idea. 
 
-###Looking at it from a different angle
+### Looking at it from a different angle
 Instead of David's set of statements, let's think about this assertion.
 
 > A company only writes custom software to gain a competitive advantage. Nothing else justifies the costs and risks associated.
@@ -44,7 +44,7 @@ So custom software is written to confer competitive advantage, but can only conf
 
 That's why ALM matters. The success of a company **is** fundamentally linked to how well it can produce the custom applications that creates an advantage. Failed software projects are failed attempts to better compete.
 
-####References
+#### References
 + [David Chappell's website][DavidChappell]
 + [.Net Rocks Episode 956][DNR956]
 
