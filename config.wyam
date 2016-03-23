@@ -1,6 +1,6 @@
 FileSystem.InputPaths[0] = "Input";
 FileSystem.OutputPath = "Output";
-==============
+=====================================================================
 
 public static class Utilities 
 {
@@ -15,14 +15,14 @@ public static class Utilities
 	}
 }
 
---------------
+-----------------------------------------------------------------------
 Pipelines.Add("Posts",
 	ReadFiles(@"Posts\*.md"),  // Read all markdown files in the "posts" directory
 	FrontMatter(Yaml()),  // Load any frontmatter and parse it as YAML markup
 	Markdown().EscapeAt(true),  // Render the markdown content
 	Concat(
 		ReadFiles(@"Posts\*.cshtml").Where(x => Path.GetFileName(x)[0] != '_' && Path.GetFileName(x) != "Index.cshtml"),
-		FrontMatter(Yaml())		
+		FrontMatter(Yaml())
 	),
 	Razor(),  // Compile and render the page template
 	Excerpt(),
@@ -65,9 +65,9 @@ Pipelines.Add("Content",
     Concat(
         ReadFiles(@"*.cshtml")
             .Where(x => System.IO.Path.GetFileName(x)[0] != '_' && !Path.GetDirectoryName(x).EndsWith("Posts")),
-		FrontMatter(Yaml())		
+		FrontMatter(Yaml())
 	),
-	Razor(), 
+	Razor(),
 	WriteFiles(@".html")
 );
 
@@ -79,7 +79,7 @@ Pipelines.Add("Tags",
     	.SelectMany(x => x.Get<string[]>("Tags"))
 		.Distinct()
 		.Select(x => @ctx.GetDocument(@doc, new Dictionary<string, object>()
-		{ 
+		{
 		    { "Title", x },
 			{ "Tag", x }
 		}))),
