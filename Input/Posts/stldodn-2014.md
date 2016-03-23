@@ -10,7 +10,7 @@ Tags:
 ---
 It's that time of year again! With kids back in school and the Labor Day weekend approaching, summer is effectively over and the St. Louis Days of .NET (STLDODN) conference is approaching once again!
 
-![STLDODN logo](/Content/images/2014/Aug/stldodn.png)
+![STLDODN logo](../Content/images/2014/Aug/stldodn.png)
 [Polaris Solutions](http://polarissolutions.com/) is once again a sponsor and several of us will be presenting.
 
 [Angela Dugan](http://www.tfswhisperer.com) is back again this year with two talks: [Attaining Organizational Agility on a Shoestring](http://stldodn.com/2014/Sessions/33) and [Structuring your Team Foundation Server for the Long Haul](http://stldodn.com/2014/Sessions/34)
