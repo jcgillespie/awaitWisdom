@@ -11,15 +11,15 @@ Developers were able to add the new server without issue, but when they tried to
 
 > The path &lt;local filepath&gt; is already mapped in workspace &lt;workspace name&gt; [&lt;project collection url&gt;]
 
-![Workspace Mapping Error Example](/content/images/2013/Dec/WorkspaceMapError.PNG)
+![Workspace Mapping Error Example](/Content/images/2013/Dec/WorkspaceMapError.PNG)
 
 They tried to use `tf workspace /delete` to remove the orphaned mapping. Which (correctly) returned that the old server no longer exists.
-![tf workspace /delete screenshot](/content/images/2013/Dec/TfWorkspaceDelete.PNG)
+![tf workspace /delete screenshot](/Content/images/2013/Dec/TfWorkspaceDelete.PNG)
 
 So what gives? How can a non-existent server hold onto a local location? TFS caches your workspace settings to prevent just this sort of thing. Mapping multiple team projects onto the same local folder is asking for trouble.
 
 The solution is to add an "s".
-![tf workspaces /?](/content/images/2013/Dec/TfWorkspaces.PNG)
+![tf workspaces /?](/Content/images/2013/Dec/TfWorkspaces.PNG)
  Tf workspace**s** addresses just this problem and 
 you can use it to clear out the locally cached information. The various options give the option to remove workspaces surgically
 
