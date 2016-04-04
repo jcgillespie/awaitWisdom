@@ -3,16 +3,20 @@ Title: All Tags
 @{    
 	var DocumentsByTag = Documents.ContainsKey("Published").ToLookup<string>("Tags");
 	string Tag = Model.Get<string>("Tag", null);
-    bool hasTag = Tag != null;
+    bool hasTag = !string.IsNullOrEmpty(Tag);
 }
-
+<div class="row">
 @if (hasTag)
 {
     ViewData["PostListDocuments"] = DocumentsByTag[Tag].OrderByDescending(x => x.Get<DateTimeOffset>("Published"));
-    @Html.Partial("_PostList");
-    <hr />
+    <div class="eight columns">
+        @Html.Partial("_PostList");
+    </div>
 }
-@foreach (var tagDocuments in DocumentsByTag.OrderBy(x => x.Key))
-{
-    <a href="/@Utilities.GetTagLink(tagDocuments.Key)" class="pure-button"><span class="badge">@tagDocuments.Count()</span> @tagDocuments.Key</a>
-}
+    <div class="columns @(hasTag ? "four" : "twelve")">
+    @foreach (var tagDocuments in DocumentsByTag.OrderBy(x => x.Key))
+    {
+        <a href="/@Utilities.GetTagLink(tagDocuments.Key)" class="tag-link button"><span class="badge">@tagDocuments.Count()</span>&nbsp;@tagDocuments.Key</a>
+    }
+    </div>
+</div>

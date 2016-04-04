@@ -10,57 +10,43 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"/>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css"/>
     <link rel="stylesheet" href="/Content/theme.css"/>
     <link rel="alternate" type="application/rss+xml" title="await Wisdom() All Posts" href="http://blog.awaitWisdom.com/feed.rss" />
     <link rel="alternate" type="application/rss+xml" title="await Wisdom() Tech Posts" href="http://blog.awaitWisdom.com/techfeed.rss" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic%7COpen+Sans:700,400" />
     <meta name="author" content="Joshua Gillespie" />
 </head>
 <body>
-    <div class="pure-g" id="top-nav">
-        <nav class="pure-menu">
-            <div class="pure-u-1 pure-u-md-1-2">
-                <div class="pure-menu">
-                    <a class="pure-menu-link" href="/"><code>await Wisdom()</code></a>
-                    <a href="#" class="nav-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
-                </div>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-2">
-                <div class="pure-menu pure-menu-horizontal nav-menu">
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a class="pure-menu-link" href="/about">About</a></li>
-                        <li class="pure-menu-item"><a class="pure-menu-link" href="/Posts">Archive</a></li>
-                        <li class="pure-menu-item"><a class="pure-menu-link" href="/Tags">Tags</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <header>
+    <nav id="top-nav">
+        <div class="main">
+            <a class="nav-link mono" href="/">await Wisdom()</a>
+        </div>
+        <a href="#" id="nav-toggle"><s class="bar"></s><s class="bar"></s></a>
+        <div class="links" id="nav-link-list">
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/Posts">Archive</a>
+            <a class="nav-link" href="/Tags">Tags</a>
+        </div>
+    </nav>
+    <header id="header">
         @if(IsSectionDefined("Header")) {
-        @RenderSection("Header")
+            @RenderSection("Header")
         } else {
         <div class="page-head">
             <h1>@Title</h1>
         </div>
         }
     </header>
-    <main class="content">
+    <main id="maincontent" class="container">
         @RenderBody()
     </main>
     <footer id="site-footer">
         <a class="subscribe icon-feed" href="http://blog.awaitWisdom.com/feed.rss"><span class="tooltip">Subscribe!</span></a>
         <div class="content">
              <section class="copyright">
-                 <p>This is the personal blog of <a href="http://blog.awaitWisdom.com">Joshua Gillespie</a><p>
-                 <p>All the code is available on <a href="https://github.com/jcgillespie/awaitWisdom">GitHub<a> and available under a <a href="https://opensource.org/licenses/MIT">MIT License<a><p> 
+                 <p>This is the personal blog of <a href="http://blog.awaitWisdom.com">Joshua Gillespie</a>. The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</p>
+                 <p>All the code is available on <a href="https://github.com/jcgillespie/awaitWisdom">GitHub<a> and available under a <a href="https://opensource.org/licenses/MIT">MIT License</a></p> 
                  <p>Content is available under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons Attribution 4.0 International License" /></a></p>
             </section>
-            <section>
-                Proudly published with <a href="http://wyam.io">Wyam</a>, <a href="http://lesscss.org/">LESS</a>, <a href="http://purecss.io/">Pure.css</a>, and <a href="http://vanilla-js.com/">Vanilla JS</a>
-           </section>
         </div>
     </footer>
     <script src="/Scripts/ui.js"></script>

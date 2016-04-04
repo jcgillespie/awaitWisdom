@@ -4,9 +4,9 @@ var menu = document.getElementById('top-nav'),
 
 function toggleHorizontal() {
     [].forEach.call(
-        document.getElementById('top-nav').querySelectorAll('.nav-menu'),
+        document.getElementById('nav-link-list').querySelectorAll('.nav-link'),
         function(el){
-            el.classList.toggle('pure-menu-horizontal');
+            el.classList.toggle('horizontal');
         }
     );
 };
@@ -21,7 +21,7 @@ function toggleMenu() {
         toggleHorizontal();
     }
     menu.classList.toggle('open');
-    document.getElementById('toggle').classList.toggle('x');
+    document.getElementById('nav-toggle').classList.toggle('x');
 };
 
 function closeMenu() {
@@ -30,7 +30,7 @@ function closeMenu() {
     }
 }
 
-document.getElementById('toggle').addEventListener('click', function (e) {
+document.getElementById('nav-toggle').addEventListener('click', function (e) {
     toggleMenu();
 });
 

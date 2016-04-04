@@ -1,39 +1,31 @@
 @section Header {
 <div class="page-head">
-    <h1><code>await Wisdom()</code></h1>
-    <code class="subheading">yielding control to caller until Wisdom() returns</code>
+    <h1 class="mono">await Wisdom()</h1>
+    <h2 class="subheading">yielding control to caller until Wisdom() returns</h2>
 </div>
 }
-<div class="pure-g">
-    @{
-        bool first = true;
-    
-        @foreach(IDocument doc in Documents
-                .Where(x => x.ContainsKey("Published") && x.Get<DateTimeOffset>("Published") <= System.DateTimeOffset.Now)
-                .OrderByDescending(x => x.Get<DateTimeOffset>("Published"))
-                .Take(5))
-        {
-            string file = doc.String("RelativeFilePath").Replace("\\", "/");
-            string link = "Posts/" + System.IO.Path.GetFileNameWithoutExtension(file);
-            string lead = doc.String("Lead");
-                            
-            if (!first)
-            {
-                <hr /> 
-            }
-            first = false;
+@{
+    foreach(IDocument doc in Documents
+            .Where(x => x.ContainsKey("Published") && x.Get<DateTimeOffset>("Published") <= System.DateTimeOffset.Now)
+            .OrderByDescending(x => x.Get<DateTimeOffset>("Published"))
+            .Take(5))
+    {
+        string file = doc.String("RelativeFilePath").Replace("\\", "/");
+        string link = "Posts/" + System.IO.Path.GetFileNameWithoutExtension(file);
+        string lead = doc.String("Lead");
 
-            <div class="pure-u-1">
+        <article class="row twelve columns">
+            <header>
                 <a href="@link">
-                    <h2>@doc.String("Title")</h2>
-                    @if(!string.IsNullOrWhiteSpace(lead))
-                    {
-                        <h3>@lead</h3>
-                    }
+                    <h3>@doc.String("Title")</h3>
                 </a>
-                <p>Posted on @(doc.Get<DateTimeOffset>("Published").ToLocalTime().ToString("D"))</p>
-                @Html.Raw(doc.String("Excerpt"))             
-            </div>       
-        }
+                @if(!string.IsNullOrWhiteSpace(lead))
+                {
+                    <h4 class="lead">@lead</h4>
+                }
+            </header>
+            <p>Posted on @(doc.Get<DateTimeOffset>("Published").ToLocalTime().ToString("D"))</p>
+            @Html.Raw(doc.String("Excerpt"))
+        </article>       
     }
-</div>
+}

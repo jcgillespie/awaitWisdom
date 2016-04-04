@@ -9,13 +9,13 @@
     var tagString = string.Join(", ", Tags.OrderBy(x => x).ToArray());
 }
 @section Header {
-    <div class="page-head">
-        <h1><code>@Title</code></h1>
+    <div class="page-head"> 
+        <h1>@Title</h1>
         @if(!string.IsNullOrWhiteSpace(Lead))
         {
-            <h2 class="subheading"><code>@Lead</code></h2>
-        }            
-        <div class="meta">        
+            <h2 class="subheading">@Lead</h2>
+        }
+        <div class="meta">
             @if (Published != default(DateTime))
             {
                 <span>Published on @Published.ToLongDateString()</span><br />
@@ -29,9 +29,10 @@
         {
             <div class="tags">
                 @tagString
-            </div>     
-        } 
+            </div>
+        }
     </div>
 }
-
-@RenderBody()
+<article class="row twelve columns">
+    @RenderBody()
+</article>
