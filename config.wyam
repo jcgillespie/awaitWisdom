@@ -1,6 +1,11 @@
-FileSystem.InputPaths[0] = "Input";
-FileSystem.OutputPath = "Output";
-=====================================================================
+#n Wyam.Modules.Yaml -p
+#n Wyam.Modules.Markdown -p
+#n Wyam.Modules.Razor -p
+#n Wyam.Modules.Less -p
+#n Wyam.Modules.Html -p
+
+#an "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+#an "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
 
 public static class Utilities 
 {
@@ -16,12 +21,18 @@ public static class Utilities
 }
 
 -----------------------------------------------------------------------
+FileSystem.InputPaths.Clear();
+FileSystem.InputPaths.Add( DirectoryPath.FromString("Input"));
+FileSystem.OutputPath = "Output";
+
+
 Pipelines.Add("Posts",
 	ReadFiles(@"Posts\*.md"),  // Read all markdown files in the "posts" directory
 	FrontMatter(Yaml()),  // Load any frontmatter and parse it as YAML markup
 	Markdown().EscapeAt(true),  // Render the markdown content
 	Concat(
-		ReadFiles(@"Posts\*.cshtml").Where(x => Path.GetFileName(x)[0] != '_' && Path.GetFileName(x) != "Index.cshtml"),
+		ReadFiles(@"Posts\*.cshtml")
+            .Where(x => Path.GetFileName(x.Path.ToString())[0] != '_' && Path.GetFileName(x.Path.ToString()) != "Index.cshtml"),
 		FrontMatter(Yaml())
 	),
 	Razor(),  // Compile and render the page template
@@ -29,8 +40,8 @@ Pipelines.Add("Posts",
 	WriteFiles(@".html"),  // Write the post file
     Branch(
         OrderBy((d,c)  => d.Get<DateTimeOffset>("Published")).Descending(true),
-        Rss(    siteRoot: "http://blog.awaitWisdom.com",
-                outputRssFilePath: "feed.rss",
+        Rss(    siteUri: "https://blog.awaitWisdom.com",
+                rssPath: "feed.rss",
                 feedTitle: "await Wisdom()",
                 feedDescription: "Just a blog"
             )
@@ -38,14 +49,20 @@ Pipelines.Add("Posts",
             .WithPublicationDateMetaKey("Published")
             .WithTitleMetaKey("Title")
             .WithDescriptionMetaKey("Description")
-            .WithLinkCustomizer((link) => link.EndsWith("/index.html") ? link.Substring(0, link.IndexOf("/index.html")) : link),
+            .WithLinkCustomizer((link) => 
+                {
+                    var ls = link.ToString();
+                    return ls.EndsWith("/index.html") 
+                            ? FilePath.FromString(ls.Substring(0, ls.IndexOf("/index.html"))) 
+                            : link;
+                }),
         WriteFiles()
     ),
     Branch(
         Where((d,c) => d.Get<string[]>("Tags", new string[0]).Any() && d.Get<string[]>("Tags").Contains("Tech")),
         OrderBy((d,c)  => d.Get<DateTimeOffset>("Published")).Descending(true),
-        Rss(    siteRoot: "http://blog.awaitWisdom.com",
-                outputRssFilePath: "techfeed.rss",
+        Rss(    siteUri: "https://blog.awaitWisdom.com",
+                rssPath: "techfeed.rss",
                 feedTitle: "await Wisdom()",
                 feedDescription: "Just a blog"
             )
@@ -53,18 +70,25 @@ Pipelines.Add("Posts",
             .WithPublicationDateMetaKey("Published")
             .WithTitleMetaKey("Title")
             .WithDescriptionMetaKey("Description")
-            .WithLinkCustomizer((link) => link.EndsWith("/index.html") ? link.Substring(0, link.IndexOf("/index.html")) : link),
+            .WithLinkCustomizer((link) => 
+                {
+                    var ls = link.ToString();
+                    return ls.EndsWith("/index.html") 
+                            ? FilePath.FromString(ls.Substring(0, ls.IndexOf("/index.html"))) 
+                            : link;
+                }),
         WriteFiles()
     )
 );
 
-Pipelines.Add("Content",
-    ReadFiles(@"*.md").Where(x => !Path.GetDirectoryName(x).EndsWith(@"Posts")),
+Pipelines.Add("SitePages",
+    ReadFiles(@"*.md")
+        .Where(x => !Path.GetDirectoryName(x.Path.ToString()).EndsWith(@"Posts")),
 	FrontMatter(Yaml()),
 	Markdown().EscapeAt(true),
     Concat(
         ReadFiles(@"*.cshtml")
-            .Where(x => System.IO.Path.GetFileName(x)[0] != '_' && !Path.GetDirectoryName(x).EndsWith("Posts")),
+            .Where(x => Path.GetFileName(x.Path.ToString())[0] != '_' && !Path.GetDirectoryName(x.Path.ToString()).EndsWith("Posts")),
 		FrontMatter(Yaml())
 	),
 	Razor(),
@@ -88,11 +112,12 @@ Pipelines.Add("Tags",
 );
 
 Pipelines.Add("Less",
-    ReadFiles("theme.less"),
+    ReadFiles(@"*\*.less"),
     Less(),
     WriteFiles(@".css")
 );
 
+var disallowedExt = new []{".cshtml", ".md", ".less"};
 Pipelines.Add("Resources",
-	CopyFiles("*").WithoutExtensions(".cshtml", ".md", ".less")
+	CopyFiles("**").Where(f => !disallowedExt.Contains(f.Path.Extension))
 );
