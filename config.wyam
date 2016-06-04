@@ -82,7 +82,7 @@ Pipelines.Add("Posts",
 );
 
 Pipelines.Add("SitePages",
-    ReadFiles(@"*.md")
+    ReadFiles(@"**.md")
         .Where(x => !Path.GetDirectoryName(x.Path.ToString()).EndsWith(@"Posts")),
 	FrontMatter(Yaml()),
 	Markdown().EscapeAt(true),
@@ -98,6 +98,8 @@ Pipelines.Add("SitePages",
 Pipelines.Add("Tags",
 	ReadFiles(@"Tags\index.cshtml"),
 	FrontMatter(),
+    Razor(),
+    WriteFiles(@".html"),
 	Execute(@ctx.Documents
 		.Where(x => x.ContainsKey("Published") && x.ContainsKey("Tags"))
     	.SelectMany(x => x.Get<string[]>("Tags"))
@@ -112,7 +114,7 @@ Pipelines.Add("Tags",
 );
 
 Pipelines.Add("Less",
-    ReadFiles(@"*\*.less"),
+    ReadFiles(@"**.less"),
     Less(),
     WriteFiles(@".css")
 );
