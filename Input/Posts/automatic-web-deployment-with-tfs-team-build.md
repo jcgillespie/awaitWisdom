@@ -26,7 +26,7 @@ TFS Team Build offers a lot of power and flexibility, but we can leverage the [p
 Creating a TFS Team Build definition is pretty simple. Here is an extremely quick run through with just the bare minimum so we can get to the deployment part.
 1\. From the Team Explorer, go the the Builds tab (`Ctrl+0, B`) and click "New Build Definition".
 2\. On the General tab, give your build a name.
-![TFS Build Definition General Tab](../Content/images/2014/Mar/Build_General_Tab.PNG)
+![TFS Build Definition General Tab](../assets/img/2014/Mar/Build_General_Tab.PNG)
 3\. On the Source Settings tab, select the source control folder that has your solution/web project. 
 4\. On the Process tab, pick your Build Process template (I'm using "TfvcTemplate.12.xaml". Select your project to build.
 
@@ -35,7 +35,7 @@ Creating a TFS Team Build definition is pretty simple. Here is an extremely quic
 Add `/p:DeployOnBuild=true;PublishProfile=<Publish Profile Name>`. The Publish Profile Name does NOT include the .pubxml.
 
 Here's what mine looked like 
-![TFS Build Definition Process Tab](../Content/images/2014/Mar/Build_Process_Tab.PNG)
+![TFS Build Definition Process Tab](../assets/img/2014/Mar/Build_Process_Tab.PNG)
 
 That's it! A very simple build definition will get the job done.
 
