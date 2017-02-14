@@ -1,0 +1,10 @@
+#recipe Blog
+
+Settings[Keys.Host] = "blog.awaitwisdom.com";
+Settings[Keys.LinksUseHttps] = true;
+Settings[BlogKeys.Title] = "await Wisdom()";
+Settings[BlogKeys.Description] = "await Wisdom()";
+Settings[BlogKeys.Intro] = "yielding control to caller until Wisdom() returns";
+// Settings[BlogKeys.ValidateRelativeLinks] = true;
+// Settings[BlogKeys.ValidateAbsoluteLinks] = true;
+Settings[BlogKeys.Image] = "/assets/img/Cursor.jpg";

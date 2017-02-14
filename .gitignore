@@ -1,40 +1,7 @@
-*.com
-*.class
-*.dll
-*.exe
-!NuGet.exe
-*.o
-*.so
-*.user
-Thumbs.db
-_ReSharper*
-*ReSharper.user
-*dotCover
-.JustCode
-*.suo
-bin
-.svn
-ipch
-*.ilk
-*.sdf
-*.opensdf
-*.pdb
-/*.~vsd
-*UpgradeWizard*
-packages/*
-!lib/*
-*App_Data*
-obj
-Output*/
-
-# NuGet Packages
-*.nupkg
-# The packages folder can be ignored because of Package Restore
-**/packages/*
-# except build/, which is used as an MSBuild target.
-!**/packages/build/
-# Uncomment if necessary however generally it will be regenerated when needed
-#!**/packages/repositories.config
-# NuGet v3's project.json files produces more ignoreable files
-*.nuget.props
-*.nuget.targets
+[Pp]ackages/
+[Tt]ools/*
+![Tt]ools/packages.config
+[Oo]utput/
+nuget.exe
+*.zip
+/debug.log

@@ -13,7 +13,7 @@ Part of migrating to a new system is migrating data/content from the old. This i
 The content was simple. FTP to my blog instance and download the folder of images. Put those images in the new blog folder. Ghost organized images in a simple "Year/Month/Filename" folder structure, which I kept.
 
 ## Part 2: The Data
-The exact path to get to the data export options in Ghost has changed as the project has matured. For my admittedly outdated instance, it was accessible via a "hidden" URL. This allowed meto download a `.json` file, which was reasonably structured. ![Json Structure](../Content/images/2016/Mar/ghost-export-json.png)
+The exact path to get to the data export options in Ghost has changed as the project has matured. For my admittedly outdated instance, it was accessible via a "hidden" URL. This allowed meto download a `.json` file, which was reasonably structured. ![Json Structure](../assets/img/2016/Mar/ghost-export-json.png)
 
 A lot of that information wasn't relevant to me, as a small, single-user blog user. My areas of interest were the `posts` and `tags` arrays.
 
