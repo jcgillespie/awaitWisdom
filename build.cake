@@ -1,13 +1,14 @@
 #tool nuget:?package=Wyam
 #addin nuget:?package=Cake.Wyam
 #addin nuget:?package=Cake.Git
+#addin nuget:?package=Cake.FileHelpers
 
 //////////////////////////////////////////////////////////////////////
 // ARGUMENTS
 //////////////////////////////////////////////////////////////////////
 
 var target = Argument("target", "Default");
-
+var output = DirectoryPath.FromString("./docs");
 //////////////////////////////////////////////////////////////////////
 // TASKS
 //////////////////////////////////////////////////////////////////////
@@ -19,7 +20,8 @@ Task("Build")
         {
             Recipe = "Blog",
             Theme = "CleanBlog",
-            UpdatePackages = true
+            UpdatePackages = true,
+            OutputPath = output
         });        
     });
     
@@ -32,7 +34,8 @@ Task("Preview")
             Theme = "CleanBlog",
             UpdatePackages = true,
             Preview = true,
-            Watch = true
+            Watch = true,
+            OutputPath = output
         });        
     });
 
@@ -46,32 +49,15 @@ Task("Debug")
 Task("Deploy")
     .Does(() =>
     {
-        // move the files outside the git repo
-        var repo = DirectoryPath.FromString(".");
-		var temp = DirectoryPath.FromString("../output/");
-		if (DirectoryExists(temp))
-		{
-			DeleteDirectory("../output/", recursive:true);
-		}
-
-        MoveDirectory("./output/", "../output/");
-        
-        // switch branch
-        GitCheckout(repo, "gh-pages");
-        var branch = GitBranchCurrent(repo);
-
-        if(branch.FriendlyName != "gh-pages") {
-            throw new Exception("wrong branch");
-        }
-
-        // clean everything up
-		Func<IFileSystemInfo, bool> excludeGit = fsi =>!fsi.Path.FullPath.EndsWith(".git", StringComparison.OrdinalIgnoreCase);
-		CleanDirectories(".", excludeGit);
-		MoveDirectory("../output/", "../output/");
-        // copy the output back in
-
-		CopyFiles("../output/.*",  repo, true);		
+        var cname = File(output+"/CNAME");
+        FileWriteText(cname, "blog.awaitWisdom.com");
         // commit
+        var repo = DirectoryPath.FromString(".");
+        GitAddAll(repo);
+        GitCommit(repo, "jcgillespie", "jcgillespie@users.noreply.github.com", "Commit from AppVeyor");
+        GitLogTip(repo);
+        GitPush(repo);
+
         // string token = EnvironmentVariable("NETLIFY_DAVEAGLICK");
         // if(string.IsNullOrEmpty(token))
         // {
