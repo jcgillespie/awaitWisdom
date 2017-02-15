@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>await Wisdom() - A Quick Introduction to Web Publish Profiles</title>
+        <meta name="description" content="await Wisdom()" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <link type="application/rss+xml" rel="alternate" title="await Wisdom()" href="/feed.rss" />
+                <link type="application/atom+xml" rel="alternate" title="await Wisdom()" href="/feed.atom" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="await Wisdom()" />
+        <meta name="msapplication-tooltip" content="await Wisdom()" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:title" content="await Wisdom() - A Quick Introduction to Web Publish Profiles" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://blog.awaitwisdom.com/posts/intro-to-web-publish-profiles" />
+        <!-- TODO: More social graph meta tags -->
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>     
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/clean-blog.js"></script>
+        <script src="/assets/js/d3.v3.min.js"></script>
+        <script src="/assets/js/trianglify.min.js"></script>
+        <script src="/assets/js/Please-compressed.js"></script>
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="/assets/js/html5shiv.js"></script>
+                <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->
+
+        
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">await Wisdom()</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                        <li><a href="/about-josh">About Josh</a></li>
+        <li><a href="/about-polaris-solutions">About Polaris Solutions</a></li>
+        <li><a href="/about">About this blog</a></li>
+        <li><a href="/tags">All Tags</a></li>
+        <li><a href="/posts">Archive</a></li>
+ 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header" style="background-image: url(&quot;/assets/img/Cursor.jpg&quot;)">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>A Quick Introduction to Web Publish Profiles</h1>
+    <div class="meta">        
+Published on Friday, December 20, 2013<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/migrated" class="btn btn-default btn-xs">Migrated</a>
+                    <a role="button" href="/tags/msbuild" class="btn btn-default btn-xs">MSBuild</a>
+                    <a role="button" href="/tags/msdeploy" class="btn btn-default btn-xs">MSDeploy</a>
+                    <a role="button" href="/tags/tech" class="btn btn-default btn-xs">Tech</a>
+                    <a role="button" href="/tags/web-deploy" class="btn btn-default btn-xs">Web Deploy</a>
+                    <a role="button" href="/tags/web-publish-series" class="btn btn-default btn-xs">Web Publish Series</a>
+        </div>     
+</div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<p>Deployment used to be a big hassle. Copy/Paste to UNC folder paths. XCopy in the command line. Batch scripts to string them together. Error prone, brittle, and annoying.</p>
+<p>Deployment has evolved, but I've found a lot of people don't know about Publish Profiles or what they can do these days, so here we go.</p>
+<p>There is a lot of shiny goodness to be had in publish profiles, including publishing web site projects, publishsettings files from hosting providers, and more, which I may cover in future posts. For now, here's a quick introduction to creating profiles. For the purposes of this post, I'll assume you want to use Web Deploy.</p>
+<h3 id="create-a-new-profile">Create a new profile</h3>
+<p>I've got a vanilla File &gt; New... &gt; Project web application project. You can get to the publish dialog from the Build menu...</p>
+<p><img src="../assets/img/2013/Dec/BuildMenu.PNG" class="img-fluid" alt="build menu publish option" />
+or the project context menu...
+<img src="../assets/img/2013/Dec/PublishDialog.PNG" class="img-fluid" alt="web application project context menu publish option" />
+Which gets you access to the Publish dialog. We're going to start by creating a new publish profile, called &quot;Dev&quot;.
+<img src="../assets/img/2013/Dec/PublishDialogWindow.PNG" class="img-fluid" alt="Publish Web Dialog - adding a new profile" /></p>
+<h3 id="add-connection-details">Add connection details</h3>
+<p><img src="../assets/img/2013/Dec/PublishConnection.PNG" class="img-fluid" alt="Publish connection details" />
+For a complete breakdown of the options on this screen, see the references section below. I've selected &quot;Web Deploy&quot; and plugged in the relevant server/site details.</p>
+<h3 id="settings">Settings</h3>
+<p>In the settings section you can select build configuration and publish options. Note that you can also configure Entity Framework Code First Migrations and connection string replacement here.  We'll come back to that in a future post.</p>
+<p><img src="../assets/img/2013/Dec/PublishSettings.PNG" class="img-fluid" alt="Publish Settings Tab" /></p>
+<h3 id="previewpublish">Preview/Publish</h3>
+<p>The Preview tab gives allows you to (optionally) see what would happen if you ran the deployment without changing anything. This is a good way to not only verify the settings, but see exactly what files the deployment sees as needing an update.
+<img src="../assets/img/2013/Dec/PublishPreview.PNG" class="img-fluid" alt="Publish Preview tab" />
+From here you can also click &quot;Publish&quot; to deploy, or &quot;Close&quot; will prompt you to save the profile.</p>
+<h2 id="project-changes">Project Changes</h2>
+<p>So what did all this do to your project? If you expand the Properties folder, you'll see a new &quot;PublishProfiles&quot; folder.
+<img src="../assets/img/2013/Dec/ProjectChanges.PNG" class="img-fluid" alt="New PublishProfiles folder" />
+If you open up that &quot;Dev.pubxml&quot; file, you'll find ordinary XML.
+<img src="../assets/img/2013/Dec/pubxml.PNG" class="img-fluid" alt="PubXml Snippet" />
+If you're accustomed to MSBuild project syntax, that XML will look familiar.</p>
+<p>Including the publish files in the project means it can be source controlled and everyone uses the same settings. Another dev pulling down this project will have the &quot;Dev&quot; publish settings already setup.</p>
+<h2 id="web-publish-series">Web Publish Series</h2>
+<ul>
+<li><a href="http://awaitwisdom.com/publish-profile-config-transform/">Config transformations</a></li>
+<li><a href="http://awaitwisdom.com/publishing-website-projects">Publishing Web Site Projects</a></li>
+<li><a href="http://awaitwisdom.com/automatic-web-deployment-with-tfs-team-build">Automatic deployment with TFS Team Build</a></li>
+<li>Set up your web server for web deployment.</li>
+<li>Using publishsettings files to publish to Azure (and other hosting providers)</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/dd394698.aspx">Web Deployment Overview for Visual Studio and ASP.NET</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/dd465337.aspx">How to: Deploy a Web Project Using One-Click Publish in Visual Studio</a></li>
+</ul>
+
+
+
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright text-muted">
+                        Copyright © 2017
+                        <br />
+                            <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+                        |
+                            <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <strong><a href="https://wyam.io">Generated by Wyam</a></strong>
+                    </p>
+                </div>
+        </div>
+</div>
+
+                </footer> 
+
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+        </body>
+</html>
+
