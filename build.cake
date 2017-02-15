@@ -48,8 +48,12 @@ Task("Deploy")
     {
         // move the files outside the git repo
         var repo = DirectoryPath.FromString(".");
+		var temp = DirectoryPath.FromString("../output/");
+		if (DirectoryExists(temp))
+		{
+			DeleteDirectory("../output/", recursive:true);
+		}
 
-		DeleteDirectory("../output/", recursive:true);
         MoveDirectory("./output/", "../output/");
         
         // switch branch
@@ -62,7 +66,7 @@ Task("Deploy")
 
         // clean everything up
 		Func<IFileSystemInfo, bool> excludeGit = fsi =>!fsi.Path.FullPath.EndsWith(".git", StringComparison.OrdinalIgnoreCase);
-		CleanDirectories(repo, excludeGit);
+		CleanDirectories(".", excludeGit);
 		MoveDirectory("../output/", "../output/");
         // copy the output back in
 
