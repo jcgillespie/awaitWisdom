@@ -57,23 +57,6 @@ Task("Deploy")
         GitCommit(repo, "jcgillespie", "jcgillespie@users.noreply.github.com", "Commit from AppVeyor");
         GitLogTip(repo);
         GitPush(repo);
-
-        // string token = EnvironmentVariable("NETLIFY_DAVEAGLICK");
-        // if(string.IsNullOrEmpty(token))
-        // {
-        //     throw new Exception("Could not get NETLIFY_DAVEAGLICK environment variable");
-        // }
-        
-        // This uses the Netlify CLI, but it hits the 200/min API rate limit
-        // To use this, also need #addin "Cake.Npm"
-        // Npm.Install(x => x.Package("netlify-cli"));
-        // StartProcess(
-        //    MakeAbsolute(File("./node_modules/.bin/netlify.cmd")), 
-        //    "deploy -p output -s daveaglick -t " + token);
-
-        // Upload via curl and zip instead
-        // Zip("./output", "output.zip", "./output/**/*");
-        // StartProcess("curl", "--header \"Content-Type: application/zip\" --header \"Authorization: Bearer " + token + "\" --data-binary \"@output.zip\" --url https://api.netlify.com/api/v1/sites/daveaglick.netlify.com/deploys");
     });
     
 //////////////////////////////////////////////////////////////////////
