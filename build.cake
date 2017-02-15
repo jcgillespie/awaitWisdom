@@ -61,7 +61,7 @@ Task("Deploy")
         }
 
         // clean everything up
-		var excludeGit = fsi =>!fsi.Path.FullPath.EndsWith(".git", StringComparison.OrdinalIgnoreCase);
+		Func<IFileSystemInfo, bool> excludeGit = fsi =>!fsi.Path.FullPath.EndsWith(".git", StringComparison.OrdinalIgnoreCase);
 		CleanDirectories(repo, excludeGit);
 		MoveDirectory("../output/", "../output/");
         // copy the output back in
