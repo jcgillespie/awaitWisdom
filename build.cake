@@ -49,14 +49,14 @@ Task("Debug")
 Task("Deploy")
     .Does(() =>
     {
+        var token = EnvironmentVariable("access_token");
         var cname = File(output+"/CNAME");
         FileWriteText(cname, "blog.awaitWisdom.com");
-        // commit
         var repo = DirectoryPath.FromString(".");
         GitAddAll(repo);
         GitCommit(repo, "jcgillespie", "jcgillespie@users.noreply.github.com", "Commit from AppVeyor");
         GitLogTip(repo);
-        GitPush(repo, "a00dadac7f8bedb32c805df01e0c09022ca8eef9", "", "master");
+        GitPush(repo, token, "", "master");
     });
     
 //////////////////////////////////////////////////////////////////////
