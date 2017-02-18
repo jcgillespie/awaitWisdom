@@ -56,7 +56,7 @@ Task("Deploy")
         GitAddAll(repo);
         GitCommit(repo, "jcgillespie", "jcgillespie@users.noreply.github.com", "Commit from AppVeyor");
         GitLogTip(repo);
-        GitPush(repo);
+        GitPush(repo, "a00dadac7f8bedb32c805df01e0c09022ca8eef9", "", "master");
     });
     
 //////////////////////////////////////////////////////////////////////
