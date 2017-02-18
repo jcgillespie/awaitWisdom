@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>await Wisdom() - WiFi with UniFi</title>
+        <meta name="description" content="await Wisdom()" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <link type="application/rss+xml" rel="alternate" title="await Wisdom()" href="/feed.rss" />
+                <link type="application/atom+xml" rel="alternate" title="await Wisdom()" href="/feed.atom" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="await Wisdom()" />
+        <meta name="msapplication-tooltip" content="await Wisdom()" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:title" content="await Wisdom() - WiFi with UniFi" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://blog.awaitwisdom.com/posts/wifi-with-unifi" />
+        <!-- TODO: More social graph meta tags -->
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>     
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/clean-blog.js"></script>
+        <script src="/assets/js/d3.v3.min.js"></script>
+        <script src="/assets/js/trianglify.min.js"></script>
+        <script src="/assets/js/Please-compressed.js"></script>
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="/assets/js/html5shiv.js"></script>
+                <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->
+
+        
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">await Wisdom()</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                        <li><a href="/about-josh">About Josh</a></li>
+        <li><a href="/about-polaris-solutions">About Polaris Solutions</a></li>
+        <li><a href="/about">About this blog</a></li>
+        <li><a href="/tags">All Tags</a></li>
+        <li><a href="/posts">Archive</a></li>
+ 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header" style="background-image: url(&quot;/assets/img/Cursor.jpg&quot;)">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>WiFi with UniFi</h1>
+        <h2 class="subheading">A new network</h2>
+    <div class="meta">        
+Published on Saturday, April 2, 2016<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/network" class="btn btn-default btn-xs">Network</a>
+                    <a role="button" href="/tags/tech" class="btn btn-default btn-xs">Tech</a>
+        </div>     
+</div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<p>I have had a Netgear WNR3000L Wireless Router for several years and it was starting to have some issues. The wireless network would just disappear several times a day, and rebooting the router was the only fix.  That router is open-source capable, so I'd tried the DD-WRT and TomatoWRT firmwares in addition to the stock image. Switching the image didn't seem to help, so I suspect there was some failing hardware inside.</p>
+<p>My modem is in a corner of the basement where the cable enters the house. I didn't want the WiFi access point there, so I have a little Cisco RV180 as my router/DHCP/firewall and the Netgear was in AP-only mode upstairs in the guest bedroom.</p>
+<p><img src="../assets/img/2016/Apr/wnr3000L.png" class="img-fluid" alt="WNR3000L" /><img src="../assets/img/2016/Apr/cisco_rv180.png" class="img-fluid" alt="RV180" /></p>
+<p>I was kind of passively looking for a replacement when I happened upon <a href="http://arstechnica.com/gadgets/2015/10/review-ubiquiti-unifi-made-me-realize-how-terrible-consumer-wi-fi-gear-is/1/">this article</a>, which was the first I'd heard of <a href="https://www.ubnt.com/">Ubiquiti</a> and the <a href="https://www.ubnt.com/unifi/unifi-ac/">UniFi</a> products. I picked up the <a href="https://www.ubnt.com/unifi/unifi-ap-ac-lr/">Long-Range flavor</a>, primarily because the Pro’s were out of stock, the LR's were cheaper, and they met my needs for now.</p>
+<p>The AP supports Power over Ethernet and comes with a PoE injector.  I put the PoE injector downstairs with the router, and the AP is upstairs under a dresser, happily powered with just the PoE.
+<img src="../assets/img/2016/Apr/blueglow.png" class="img-fluid" alt="blue glow" /></p>
+<p>Although it isn’t strictly needed, I did go ahead and setup the Unifi Controller, which I’ve got living in Azure. Setting that up could be the subject of a future post. A couple screenshots from my controller dashboard are below.</p>
+<p><em>Connected clients</em></p>
+<p><img src="../assets/img/2016/Apr/clients.png" class="img-fluid" alt="connected clients" /></p>
+<p><em>Nearby networks</em></p>
+<p><img src="../assets/img/2016/Apr/survey.png" class="img-fluid" alt="nearby networks" /></p>
+<p>Replacing the old WiFi was pretty easy, but the access point is more than just a drop in replacement. It was also easy to set up an isolated guest wireless network. The AC speed is pretty nice too.  If I find that I need better coverage or capacity, adding a new access point is trivial. I'll just need to plug it in and point it at the controller. It will connect and the controller will push my configuration down to the AP.</p>
+<p>I’m loving the setup. It's been rock solid so far. I’ll probably replace my Cisco RV180 (which is also starting to show age) with a <a href="https://www.ubnt.com/unifi-switching-routing/usg/">UniFi Security Gateway</a> in the near-ish future.</p>
+
+
+
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright text-muted">
+                        Copyright © 2017
+                        <br />
+                            <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+                        |
+                            <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <strong><a href="https://wyam.io">Generated by Wyam</a></strong>
+                    </p>
+                </div>
+        </div>
+</div>
+
+                </footer> 
+
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+        </body>
+</html>
+
