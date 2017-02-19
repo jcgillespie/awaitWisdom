@@ -1,3 +1,4 @@
+#n Wyam.Feeds
 #recipe Blog
 
 Settings[Keys.Host] = "blog.awaitwisdom.com";
@@ -8,3 +9,14 @@ Settings[BlogKeys.Intro] = "yielding control to caller until Wisdom() returns";
 // Settings[BlogKeys.ValidateRelativeLinks] = true;
 // Settings[BlogKeys.ValidateAbsoluteLinks] = true;
 Settings[BlogKeys.Image] = "/assets/img/Cursor.jpg";
+
+Pipelines.InsertBefore(
+    BlogPipelines.RenderPages,
+    "TechFeed",
+    new Documents(BlogPipelines.Posts),
+    new Where((d,c) => d.Get<string[]>(BlogKeys.Tags, new string[0]).Any() && d.Get<string[]>(BlogKeys.Tags).Contains("Tech")),
+    new OrderBy((d,c)  => d.Get<DateTimeOffset>(BlogKeys.Published)).Descending(true),
+    new GenerateFeeds()
+        .WithRssPath(ctx => new FilePath("techfeed.rss"))
+        .WithAtomPath(ctx => new FilePath("techfeed.atom")),
+    new WriteFiles());
