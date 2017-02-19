@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-	<link rel="self" href="https://blog.awaitwisdom.com/" />
-	<id>https://blog.awaitwisdom.com/</id>
-	<title>await Wisdom()</title>
-	<rights>2017</rights>
-	<updated>2017-02-19T21:40:59Z</updated>
-	<logo>https://blog.awaitwisdom.com/assets/img/Cursor.jpg</logo>
-	<subtitle>await Wisdom()</subtitle>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/wifi-with-unifi" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/wifi-with-unifi</id>
-		<title>WiFi with UniFi</title>
-		<updated>2016-04-02T15:00:00Z</updated>
-		<content>&lt;p&gt;I have had a Netgear WNR3000L Wireless Router for several years and it was starting to have some issues. The wireless network would just disappear several times a day, and rebooting the router was the only fix.  That router is open-source capable, so I'd tried the DD-WRT and TomatoWRT firmwares in addition to the stock image. Switching the image didn't seem to help, so I suspect there was some failing hardware inside.&lt;/p&gt;
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+	<channel>
+		<title>await Wisdom()</title>
+		<link>https://blog.awaitwisdom.com/</link>
+		<description>await Wisdom()</description>
+		<copyright>2017</copyright>
+		<pubDate>Sun, 19 Feb 2017 21:40:59 GMT</pubDate>
+		<lastBuildDate>Sun, 19 Feb 2017 21:40:59 GMT</lastBuildDate>
+		<item>
+			<title>WiFi with UniFi</title>
+			<link>https://blog.awaitwisdom.com/posts/wifi-with-unifi</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/wifi-with-unifi</guid>
+			<pubDate>Sat, 02 Apr 2016 15:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;I have had a Netgear WNR3000L Wireless Router for several years and it was starting to have some issues. The wireless network would just disappear several times a day, and rebooting the router was the only fix.  That router is open-source capable, so I'd tried the DD-WRT and TomatoWRT firmwares in addition to the stock image. Switching the image didn't seem to help, so I suspect there was some failing hardware inside.&lt;/p&gt;
 &lt;p&gt;My modem is in a corner of the basement where the cable enters the house. I didn't want the WiFi access point there, so I have a little Cisco RV180 as my router/DHCP/firewall and the Netgear was in AP-only mode upstairs in the guest bedroom.&lt;/p&gt;
 &lt;p&gt;&lt;img src="../assets/img/2016/Apr/wnr3000L.png" class="img-fluid" alt="WNR3000L"&gt;&lt;img src="../assets/img/2016/Apr/cisco_rv180.png" class="img-fluid" alt="RV180"&gt;&lt;/p&gt;
 &lt;p&gt;I was kind of passively looking for a replacement when I happened upon &lt;a href="http://arstechnica.com/gadgets/2015/10/review-ubiquiti-unifi-made-me-realize-how-terrible-consumer-wi-fi-gear-is/1/"&gt;this article&lt;/a&gt;, which was the first I'd heard of &lt;a href="https://www.ubnt.com/"&gt;Ubiquiti&lt;/a&gt; and the &lt;a href="https://www.ubnt.com/unifi/unifi-ac/"&gt;UniFi&lt;/a&gt; products. I picked up the &lt;a href="https://www.ubnt.com/unifi/unifi-ap-ac-lr/"&gt;Long-Range flavor&lt;/a&gt;, primarily because the Pro’s were out of stock, the LR's were cheaper, and they met my needs for now.&lt;/p&gt;
@@ -25,16 +26,16 @@
 &lt;p&gt;&lt;em&gt;Nearby networks&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="../assets/img/2016/Apr/survey.png" class="img-fluid" alt="nearby networks"&gt;&lt;/p&gt;
 &lt;p&gt;Replacing the old WiFi was pretty easy, but the access point is more than just a drop in replacement. It was also easy to set up an isolated guest wireless network. The AC speed is pretty nice too.  If I find that I need better coverage or capacity, adding a new access point is trivial. I'll just need to plug it in and point it at the controller. It will connect and the controller will push my configuration down to the AP.&lt;/p&gt;
-&lt;p&gt;I’m loving the setup. It's been rock solid so far. I’ll probably replace my Cisco RV180 (which is also starting to show age) with a &lt;a href="https://www.ubnt.com/unifi-switching-routing/usg/"&gt;UniFi Security Gateway&lt;/a&gt; in the near-ish future.&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/ghost-converter" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/ghost-converter</id>
-		<title>Ghost Converter</title>
-		<updated>2016-03-23T11:00:00Z</updated>
-		<content>&lt;p&gt;Part of migrating to a new system is migrating data/content from the old. This is a quick "How to" post documenting how I exported old posts from my outdated &lt;a href="https://github.com/TryGhost/Ghost"&gt;Ghost blog&lt;/a&gt; for import into my current &lt;a href="http://wyam.io/"&gt;Wyam&lt;/a&gt;-based blog.&lt;/p&gt;
+&lt;p&gt;I’m loving the setup. It's been rock solid so far. I’ll probably replace my Cisco RV180 (which is also starting to show age) with a &lt;a href="https://www.ubnt.com/unifi-switching-routing/usg/"&gt;UniFi Security Gateway&lt;/a&gt; in the near-ish future.&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>Ghost Converter</title>
+			<link>https://blog.awaitwisdom.com/posts/ghost-converter</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/ghost-converter</guid>
+			<pubDate>Wed, 23 Mar 2016 11:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Part of migrating to a new system is migrating data/content from the old. This is a quick "How to" post documenting how I exported old posts from my outdated &lt;a href="https://github.com/TryGhost/Ghost"&gt;Ghost blog&lt;/a&gt; for import into my current &lt;a href="http://wyam.io/"&gt;Wyam&lt;/a&gt;-based blog.&lt;/p&gt;
 &lt;h2 id="part-1-the-content"&gt;Part 1: The Content&lt;/h2&gt;
 &lt;p&gt;The content was simple. FTP to my blog instance and download the folder of images. Put those images in the new blog folder. Ghost organized images in a simple "Year/Month/Filename" folder structure, which I kept.&lt;/p&gt;
 &lt;h2 id="part-2-the-data"&gt;Part 2: The Data&lt;/h2&gt;
@@ -54,16 +55,16 @@
 &lt;p&gt;I needed individual Markdown files for each post, with the metadata intact. Wyam uses a &lt;a href="http://yaml.org/"&gt;YAML&lt;/a&gt; file header (or Frontmatter) for metadata, followed by the body of post.&lt;/p&gt;
 &lt;p&gt;I made a quick console application to do this for me, which is available on &lt;a href="https://github.com/jcgillespie/GhostConverter"&gt;GitHub&lt;/a&gt;. It is very rudimentary, but did the job for me, more or less.&lt;/p&gt;
 &lt;h2 id="part-3-cleanup"&gt;Part 3: Cleanup&lt;/h2&gt;
-&lt;p&gt;The "less" part of "more or less" is all the various small cleanup tasks I've done since then. They include things like adding a "Migrated" tag to all the legacy post files, correcting broken image links, adding some CSS classes to make the images responsive to smaller screen sizes, etc.  For these simple mass edits, I've just used &lt;a href="https://www.sublimetext.com/"&gt;Sublime Text&lt;/a&gt;&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/a-new-stack" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/a-new-stack</id>
-		<title>A New Stack</title>
-		<updated>2016-03-19T15:00:00Z</updated>
-		<content>&lt;h4 id="teaching-an-old-blog-a-new-stack"&gt;Teaching an old blog a new stack&lt;/h4&gt;
+&lt;p&gt;The "less" part of "more or less" is all the various small cleanup tasks I've done since then. They include things like adding a "Migrated" tag to all the legacy post files, correcting broken image links, adding some CSS classes to make the images responsive to smaller screen sizes, etc.  For these simple mass edits, I've just used &lt;a href="https://www.sublimetext.com/"&gt;Sublime Text&lt;/a&gt;&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>A New Stack</title>
+			<link>https://blog.awaitwisdom.com/posts/a-new-stack</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/a-new-stack</guid>
+			<pubDate>Sat, 19 Mar 2016 15:00:00 GMT</pubDate>
+			<content:encoded>&lt;h4 id="teaching-an-old-blog-a-new-stack"&gt;Teaching an old blog a new stack&lt;/h4&gt;
 &lt;p&gt;After messing around with the Ghost blog engine and Node.js, I knew I wanted a new technology stack. My daily work is typically in .NET, so that was preferrable. Playing with and learning Node.js was fine, but I found that having the learning curve between me and writing kept me from writing.&lt;/p&gt;
 &lt;p&gt;I was intrigued by the concept of a static website. I looked at Jekyl, and Octopress, which introduced me to the static workflow and GitHub Pages hosting. In the end, their Windows environment support wasn't great and it I still preferred to find something in the .NET framework.&lt;/p&gt;
 &lt;p&gt;So my list of requirements was pretty small.&lt;/p&gt;
@@ -76,31 +77,31 @@
 &lt;/ul&gt;
 &lt;p&gt;Eventually, I found &lt;a href="http://wyam.io/"&gt;Wyam&lt;/a&gt;. Wyam is capable of a lot more than just blogging, but it checked all the right boxes.  Setup was pretty straightforward, and working locally is simple.&lt;/p&gt;
 &lt;p&gt;I commit posts to my &lt;a href="https://github.com/jcgillespie/awaitWisdom"&gt;GitHub repo&lt;/a&gt;, &lt;a href="http://www.appveyor.com/"&gt;AppVeyor&lt;/a&gt; sees that commit, pulls down the latest release of Wyam, generates the static files, and commits the results to the &lt;code&gt;gh-pages&lt;/code&gt; branch, which &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt; hosts for me (free!)&lt;/p&gt;
-&lt;p&gt;Still very much a work in progress, but I'm having fun blogging again. See a typo? Send me a pull request. Feel free to suggest features or submit bugs too.  All the code is licensed under a &lt;a href="https://opensource.org/licenses/MIT"&gt;MIT License&lt;/a&gt; and content is available as a &lt;a href="http://creativecommons.org/licenses/by/4.0/deed.en_US"&gt;Creative Commons attribution license&lt;/a&gt;.&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/reboot" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/reboot</id>
-		<title>Reboot MVP</title>
-		<updated>2016-03-12T12:00:00Z</updated>
-		<content>&lt;h4 id="reboot-mvp"&gt;Reboot MVP&lt;/h4&gt;
+&lt;p&gt;Still very much a work in progress, but I'm having fun blogging again. See a typo? Send me a pull request. Feel free to suggest features or submit bugs too.  All the code is licensed under a &lt;a href="https://opensource.org/licenses/MIT"&gt;MIT License&lt;/a&gt; and content is available as a &lt;a href="http://creativecommons.org/licenses/by/4.0/deed.en_US"&gt;Creative Commons attribution license&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>Reboot MVP</title>
+			<link>https://blog.awaitwisdom.com/posts/reboot</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/reboot</guid>
+			<pubDate>Sat, 12 Mar 2016 12:00:00 GMT</pubDate>
+			<content:encoded>&lt;h4 id="reboot-mvp"&gt;Reboot MVP&lt;/h4&gt;
 &lt;p&gt;I've wanted to resume blogging again for some time now, but there was something standing in my way: my current blog.&lt;/p&gt;
 &lt;p&gt;When I started blogging, I wanted to use my blog as an exercise to learn and flex programming muscles I hadn't been using much. To that end, I started by using &lt;a href="https://ghost.org/"&gt;Ghost&lt;/a&gt;, which was fresh out of a successful Kickstarter. I wanted to see what all the hype surrounding Node.js was about, and the blog looked pretty sweet, so I decided to give it a shot. I made matters more complicated by hosting the blog in Azure, which was just starting to support Node.js at that time.&lt;/p&gt;
 &lt;p&gt;I enjoyed blogging, but I didn't enjoy all maintenance pains I encountered with my chosen setup. To make a long story shorter, it isn't a coincidence that I stopped blogging shortly after Ghost released 0.5.1. I had trouble applying the upgrade and lost interest. I wanted to write and instead created a chore.&lt;/p&gt;
 &lt;p&gt;After several half-hearted attempts to reboot, I've finally found the drive and the time to start building something new. I'm a slow learner, as I'm still using the blog as an opportunity to learn new things in addition to writing, but at least I'm learning, right?&lt;/p&gt;
 &lt;p&gt;I'm also using this chance to fight my own inclinations and instead practice what I preach by launching an imperfect, in progress blog. Rather than wait (probably forever) until I have a perfect site, I'll launch the bare minimum and iterate.  This post is the &lt;a href="https://en.wikipedia.org/wiki/Minimum_viable_product"&gt;Minimum Viable Product&lt;/a&gt;. The style is still ugly and there is functionality missing, but if you're reading this then I've done enough to launch.&lt;/p&gt;
-&lt;p&gt;I think imperfect and improving is better than the dead blog it replaces. Check back for progress!&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/how-to-extend-tfs-team-web-access" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/how-to-extend-tfs-team-web-access</id>
-		<title>How to Extend TFS Team Web Access</title>
-		<updated>2014-09-02T07:50:57Z</updated>
-		<content>&lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/ee523998.aspx"&gt;TFS Team Web Access (TWA)&lt;/a&gt; is a great tool for low-friction access to the development process. It has improved by leaps and bounds in the last few releases, but what if you want even more? Maybe you've seen vendors with products that augment TWA and wondered how you can do it yourself. Or maybe you're like me and just like to tinker for curiosity's sake.&lt;/p&gt;
+&lt;p&gt;I think imperfect and improving is better than the dead blog it replaces. Check back for progress!&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>How to Extend TFS Team Web Access</title>
+			<link>https://blog.awaitwisdom.com/posts/how-to-extend-tfs-team-web-access</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/how-to-extend-tfs-team-web-access</guid>
+			<pubDate>Tue, 02 Sep 2014 07:50:57 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/ee523998.aspx"&gt;TFS Team Web Access (TWA)&lt;/a&gt; is a great tool for low-friction access to the development process. It has improved by leaps and bounds in the last few releases, but what if you want even more? Maybe you've seen vendors with products that augment TWA and wondered how you can do it yourself. Or maybe you're like me and just like to tinker for curiosity's sake.&lt;/p&gt;
 &lt;p&gt;Clients often ask if they can customize/extend TWA and the short answer is "It isn't supported". But if you &lt;em&gt;really&lt;/em&gt; want to extend TWA, the slightly longer answer is "Yes, but it isn't supported." Here's how you do exactly that.&lt;/p&gt;
 &lt;h2 id="objective"&gt;Objective&lt;/h2&gt;
 &lt;p&gt;We're going to add custom code to the TFS Team Web Access application and extend it with whatever we want.&lt;/p&gt;
@@ -256,32 +257,32 @@ Bingo!&lt;/p&gt;
 &lt;h3 id="credits"&gt;Credits&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://flic.kr/p/5SWkC9"&gt;Image Credit: Eirik Solheim&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/stldodn-2014" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/stldodn-2014</id>
-		<title>St. Louis Days of .NET 2014</title>
-		<updated>2014-08-28T14:19:31Z</updated>
-		<content>&lt;p&gt;It's that time of year again! With kids back in school and the Labor Day weekend approaching, summer is effectively over and the St. Louis Days of .NET (STLDODN) conference is approaching once again!&lt;/p&gt;
+&lt;/ul&gt;</content:encoded>
+		</item>
+		<item>
+			<title>St. Louis Days of .NET 2014</title>
+			<link>https://blog.awaitwisdom.com/posts/stldodn-2014</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/stldodn-2014</guid>
+			<pubDate>Thu, 28 Aug 2014 14:19:31 GMT</pubDate>
+			<content:encoded>&lt;p&gt;It's that time of year again! With kids back in school and the Labor Day weekend approaching, summer is effectively over and the St. Louis Days of .NET (STLDODN) conference is approaching once again!&lt;/p&gt;
 &lt;p&gt;&lt;img src="../assets/img/2014/Aug/stldodn.png" class="img-fluid" alt="STLDODN logo"&gt;
 &lt;a href="http://polarissolutions.com/"&gt;Polaris Solutions&lt;/a&gt; is once again a sponsor and several of us will be presenting.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.tfswhisperer.com"&gt;Angela Dugan&lt;/a&gt; is back again this year with two talks: &lt;a href="http://stldodn.com/2014/Sessions/33"&gt;Attaining Organizational Agility on a Shoestring&lt;/a&gt; and &lt;a href="http://stldodn.com/2014/Sessions/34"&gt;Structuring your Team Foundation Server for the Long Haul&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.notsotrivial.net/blog/"&gt;Clint Edmonson&lt;/a&gt; will be back as well with two sessions: &lt;a href="http://stldodn.com/2014/Sessions/2"&gt;Application Architecture Jumpstart&lt;/a&gt; and &lt;a href="http://stldodn.com/2014/Sessions/1"&gt;Advanced OOP - Laws, Principles, Idioms&lt;/a&gt;. I caught his OOP talk last year and it was great. Even experienced devs are guaranteed to learn something new or re-learn something they forgot.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.oneluckidev.com/"&gt;Jeff Przylucki&lt;/a&gt; will make his STLDODN debut this year with a presentation on &lt;a href="http://stldodn.com/2014/Sessions/223"&gt;TFS Team Project Consolidation and Migration&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;And I have the honor of presenting two sessions again this year. I'll be talking about all the new ASP.NET Identity features in &lt;a href="http://stldodn.com/2014/Sessions/150"&gt;Who are you? Digging into ASP.NET Identity&lt;/a&gt;. I'm also excited to present &lt;a href="http://stldodn.com/2014/Sessions/151"&gt;Teaching the Cloud to Think&lt;/a&gt;, which is an intro to machine learning and the new Azure Machine Learning offering.&lt;/p&gt;
-&lt;p&gt;Registration for STLDODN isn't open yet, but be sure to watch for it to open. The conference has sold out the last few years. Be sure to check out all the other &lt;a href="http://stldodn.com/2014/Sessions"&gt;sessions&lt;/a&gt; and &lt;a href="http://stldodn.com/2014/Precompilers"&gt;precompilers&lt;/a&gt;. There's a lot of awesome content on the agenda!&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/why-alm-matters" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/why-alm-matters</id>
-		<title>Why ALM Matters</title>
-		<updated>2014-03-21T22:22:59Z</updated>
-		<content>&lt;p&gt;I recently heard a podcast where &lt;a href="http://www.davidchappell.com/"&gt;David Chappell&lt;/a&gt; said something that piqued my interest. Paraphrasing, his thinking went something like this.&lt;/p&gt;
+&lt;p&gt;Registration for STLDODN isn't open yet, but be sure to watch for it to open. The conference has sold out the last few years. Be sure to check out all the other &lt;a href="http://stldodn.com/2014/Sessions"&gt;sessions&lt;/a&gt; and &lt;a href="http://stldodn.com/2014/Precompilers"&gt;precompilers&lt;/a&gt;. There's a lot of awesome content on the agenda!&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>Why ALM Matters</title>
+			<link>https://blog.awaitwisdom.com/posts/why-alm-matters</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/why-alm-matters</guid>
+			<pubDate>Fri, 21 Mar 2014 22:22:59 GMT</pubDate>
+			<content:encoded>&lt;p&gt;I recently heard a podcast where &lt;a href="http://www.davidchappell.com/"&gt;David Chappell&lt;/a&gt; said something that piqued my interest. Paraphrasing, his thinking went something like this.&lt;/p&gt;
 &lt;p&gt;Given that...&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Business processes support what the business does.&lt;/li&gt;
@@ -314,16 +315,16 @@ Bingo!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.davidchappell.com/"&gt;David Chappell's website&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://dotnetrocks.com/default.aspx?showNum=956"&gt;.Net Rocks Episode 956&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/test-lab-management-in-windows-azure" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/test-lab-management-in-windows-azure</id>
-		<title>Test Lab Management in Windows Azure</title>
-		<updated>2014-03-17T09:34:04Z</updated>
-		<content>&lt;p&gt;I was fortunate to be involved in some of the development of these tools. Really neat set of solutions.
+&lt;/ul&gt;</content:encoded>
+		</item>
+		<item>
+			<title>Test Lab Management in Windows Azure</title>
+			<link>https://blog.awaitwisdom.com/posts/test-lab-management-in-windows-azure</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/test-lab-management-in-windows-azure</guid>
+			<pubDate>Mon, 17 Mar 2014 09:34:04 GMT</pubDate>
+			<content:encoded>&lt;p&gt;I was fortunate to be involved in some of the development of these tools. Really neat set of solutions.
 &lt;img src="http://polarissolutions.com/Blog/image.axd?picture=%2f2014%2f03%2fbeaker.png" class="img-fluid" alt="Lab management beaker image"&gt;&lt;/p&gt;
 &lt;p&gt;Polaris Solutions is proud to offer an exclusive set of tools and services that allows testers using &lt;strong&gt;Microsoft Test Manager (MTM)&lt;/strong&gt; and &lt;strong&gt;Lab Center&lt;/strong&gt; to tap into the power and scalability of Windows Azure.&lt;/p&gt;
 &lt;p&gt;MTM has proven to be an invaluable tool to many enterprise testing organizations. Unfortunately, the overhead of provisioning and managing virtual machines to support the dynamic needs of testing teams has meant that the powerful self-service infrastructure features of &lt;strong&gt;Lab Center&lt;/strong&gt; have largely been ignored.&lt;/p&gt;
@@ -340,16 +341,16 @@ Bingo!&lt;/p&gt;
 &lt;li&gt;Available today!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Contact &lt;a href="http://polarissolutions.com/Contact"&gt;Polaris Solutions&lt;/a&gt; to learn more about this powerful solution.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://polarissolutions.com/Blog/post/2014/03/17/Test-Lab-Management-in-Windows-Azure.aspx"&gt;(Originally posted here)&lt;/a&gt;&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/automatic-web-deployment-with-tfs-team-build" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/automatic-web-deployment-with-tfs-team-build</id>
-		<title>Automatic Web Deployment with TFS Team Build</title>
-		<updated>2014-02-28T18:59:04Z</updated>
-		<content>&lt;p&gt;If I have to do something three times, it gets automated. The first time I'm just figuring out how to make it work. The second time ensures I know the process and can repeat it without all the exploration. The third time it gets automated and I can stop thinking about it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://polarissolutions.com/Blog/post/2014/03/17/Test-Lab-Management-in-Windows-Azure.aspx"&gt;(Originally posted here)&lt;/a&gt;&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>Automatic Web Deployment with TFS Team Build</title>
+			<link>https://blog.awaitwisdom.com/posts/automatic-web-deployment-with-tfs-team-build</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/automatic-web-deployment-with-tfs-team-build</guid>
+			<pubDate>Fri, 28 Feb 2014 18:59:04 GMT</pubDate>
+			<content:encoded>&lt;p&gt;If I have to do something three times, it gets automated. The first time I'm just figuring out how to make it work. The second time ensures I know the process and can repeat it without all the exploration. The third time it gets automated and I can stop thinking about it.&lt;/p&gt;
 &lt;p&gt;Everytime I touch something, there is the chance for error. An automated process should be perfectly repeatable. Once you get it just right, you can back away and leave it alone to run happily.&lt;/p&gt;
 &lt;p&gt;If someone from your team has to manually deploy your application, there is a better way.&lt;/p&gt;
 &lt;p&gt;In the past, we could &lt;a href="http://chriskadel.com/2013/03/using-tfs-to-build-and-deploy-during-the-build-process-with-ms-deploy/"&gt;Publish with MS Deploy&lt;/a&gt;. It simplified things, but you still had some hurdles to jump. You needed to edit your projects manually and add build configurations for each environment. This is still a valid means of automating deployment in your team build, but it is more painful than necessary.&lt;/p&gt;
@@ -383,38 +384,27 @@ Bingo!&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://www.visualstudio.com/products/visual-studio-online-overview-vs"&gt;Visual Studio Online&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://awaitwisdom.com/intro-to-web-publish-profiles/"&gt;Intro to web publish profiles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://awaitwisdom.com/publish-profile-config-transform/"&gt;Web.config transforms with Publish Profiles&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/polaris-solutions-is-a-gold-sponsor-for-agile-gravy-stl-2014" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/polaris-solutions-is-a-gold-sponsor-for-agile-gravy-stl-2014</id>
-		<title>Polaris Solutions is a Gold Sponsor for Agile Gravy STL 2014</title>
-		<updated>2014-02-28T17:01:31Z</updated>
-		<content>&lt;p&gt;We’re proud to announce that we just signed on as a Gold sponsor for the first annual &lt;a href="http://agilegravy.com/"&gt;Agile Gravy St. Louis&lt;/a&gt; conference – a rich &amp;amp; savory 1-day Agile conference experience that’s worth soaking up every last drop. Early bird registration is $99.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded>
+		</item>
+		<item>
+			<title>Polaris Solutions is a Gold Sponsor for Agile Gravy STL 2014</title>
+			<link>https://blog.awaitwisdom.com/posts/polaris-solutions-is-a-gold-sponsor-for-agile-gravy-stl-2014</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/polaris-solutions-is-a-gold-sponsor-for-agile-gravy-stl-2014</guid>
+			<pubDate>Fri, 28 Feb 2014 17:01:31 GMT</pubDate>
+			<content:encoded>&lt;p&gt;We’re proud to announce that we just signed on as a Gold sponsor for the first annual &lt;a href="http://agilegravy.com/"&gt;Agile Gravy St. Louis&lt;/a&gt; conference – a rich &amp;amp; savory 1-day Agile conference experience that’s worth soaking up every last drop. Early bird registration is $99.&lt;/p&gt;
 &lt;p&gt;&lt;img src="../assets/img/2014/Feb/AGLogoSmall1_300x171_1_.png" class="img-fluid" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;The event will be held on Thursday, April 10th at the St. Louis Marriott West. Drop by our booth and say HI!&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/merry-christmas" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/merry-christmas</id>
-		<title>Merry Christmas!</title>
-		<updated>2013-12-25T10:09:44Z</updated>
-		<content>&lt;a href="http://www.flickr.com/photos/voxdeix/11369915464/" title="My Snow Angel"&gt;
-![My Snow Angel](http://farm8.staticflickr.com/7339/11369915464_8276ab4b94.jpg)&lt;/a&gt;
-&lt;p&gt;I hope you have a very merry Christmas and a happy New Year!&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/publish-profile-config-transform" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/publish-profile-config-transform</id>
-		<title>Web.Config transforms with Publish Profiles</title>
-		<updated>2013-12-23T12:00:00Z</updated>
-		<content>&lt;p&gt;When you create a publish profile, you may notice that there is an option to replace the connection string on the Settings tab.
+&lt;p&gt;The event will be held on Thursday, April 10th at the St. Louis Marriott West. Drop by our booth and say HI!&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>Web.Config transforms with Publish Profiles</title>
+			<link>https://blog.awaitwisdom.com/posts/publish-profile-config-transform</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/publish-profile-config-transform</guid>
+			<pubDate>Mon, 23 Dec 2013 12:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;When you create a publish profile, you may notice that there is an option to replace the connection string on the Settings tab.
 &lt;img src="../assets/img/2013/Dec/PublishSettings.PNG" class="img-fluid" alt="Publish dialog settings tab"&gt;
 You can specify a connection string there and it will (optionally) update the destination web.config.&lt;/p&gt;
 &lt;p&gt;But what if you have more than connection strings to change? What about &lt;appsettings&gt;? It is a lesser known feature, but publish profiles support config transformations.&lt;/appsettings&gt;&lt;/p&gt;
@@ -460,16 +450,16 @@ Much Better!&lt;/dependentupon&gt;&lt;/p&gt;
 &lt;h2 id="references"&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/dd465326.aspx"&gt;Web.config Transformation Syntax for Web Project Deployment Using Visual Studio&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/intro-to-web-publish-profiles" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/intro-to-web-publish-profiles</id>
-		<title>A Quick Introduction to Web Publish Profiles</title>
-		<updated>2013-12-20T12:25:17Z</updated>
-		<content>&lt;p&gt;Deployment used to be a big hassle. Copy/Paste to UNC folder paths. XCopy in the command line. Batch scripts to string them together. Error prone, brittle, and annoying.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded>
+		</item>
+		<item>
+			<title>A Quick Introduction to Web Publish Profiles</title>
+			<link>https://blog.awaitwisdom.com/posts/intro-to-web-publish-profiles</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/intro-to-web-publish-profiles</guid>
+			<pubDate>Fri, 20 Dec 2013 12:25:17 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Deployment used to be a big hassle. Copy/Paste to UNC folder paths. XCopy in the command line. Batch scripts to string them together. Error prone, brittle, and annoying.&lt;/p&gt;
 &lt;p&gt;Deployment has evolved, but I've found a lot of people don't know about Publish Profiles or what they can do these days, so here we go.&lt;/p&gt;
 &lt;p&gt;There is a lot of shiny goodness to be had in publish profiles, including publishing web site projects, publishsettings files from hosting providers, and more, which I may cover in future posts. For now, here's a quick introduction to creating profiles. For the purposes of this post, I'll assume you want to use Web Deploy.&lt;/p&gt;
 &lt;h3 id="create-a-new-profile"&gt;Create a new profile&lt;/h3&gt;
@@ -508,16 +498,16 @@ If you're accustomed to MSBuild project syntax, that XML will look familiar.&lt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/dd394698.aspx"&gt;Web Deployment Overview for Visual Studio and ASP.NET&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/dd465337.aspx"&gt;How to: Deploy a Web Project Using One-Click Publish in Visual Studio&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/tfs-workspace-configuration-cache" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/tfs-workspace-configuration-cache</id>
-		<title>TFS Workspace configuration cache</title>
-		<updated>2013-12-13T15:09:32Z</updated>
-		<content>&lt;p&gt;I have a client that recently upgraded their Team Foundation Server 2012 to 2013 and moved to new hardware in the process. Their TFS 2012 instance has been decommissioned and they hit a small workspace snag.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded>
+		</item>
+		<item>
+			<title>TFS Workspace configuration cache</title>
+			<link>https://blog.awaitwisdom.com/posts/tfs-workspace-configuration-cache</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/tfs-workspace-configuration-cache</guid>
+			<pubDate>Fri, 13 Dec 2013 15:09:32 GMT</pubDate>
+			<content:encoded>&lt;p&gt;I have a client that recently upgraded their Team Foundation Server 2012 to 2013 and moved to new hardware in the process. Their TFS 2012 instance has been decommissioned and they hit a small workspace snag.&lt;/p&gt;
 &lt;p&gt;Developers were able to add the new server without issue, but when they tried to map the new workspace to the same local folders they used with the old workspace, they got an error.&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;The path &amp;lt;local filepath&amp;gt; is already mapped in workspace &amp;lt;workspace name&amp;gt; [&amp;lt;project collection url&amp;gt;]&lt;/p&gt;
@@ -533,44 +523,44 @@ you can use it to clear out the locally cached information. The various options 
 &lt;p&gt;&lt;code&gt;tf workspaces /remove:MyWorkspace /collection:"http://doesnotexist:8080/tfs/Collection&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;or you can simply scorch the earth and remove the entire local cache.
 &lt;code&gt;tf workspaces /remove:*&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This tool isn't removing workspace mappings from the Team Foundation Server, just editing out your local cache, so either is fine.&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/st-louis-days-of-net-slides" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/st-louis-days-of-net-slides</id>
-		<title>St. Louis Days of .NET Slides</title>
-		<updated>2013-11-16T12:00:00Z</updated>
-		<content>&lt;p&gt;Thanks to everyone who attended my talks this weekend. The slides for my &lt;a href="http://www.stldodn.com/2013/speakers/josh-gillespie"&gt;STLDODN talks&lt;/a&gt; are up on &lt;a href="http://www.slideshare.net/JoshGillespie2"&gt;SlideShare&lt;/a&gt; and the demo code is at  &lt;a href="https://github.com/jcgillespie/Demos"&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This tool isn't removing workspace mappings from the Team Foundation Server, just editing out your local cache, so either is fine.&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>St. Louis Days of .NET Slides</title>
+			<link>https://blog.awaitwisdom.com/posts/st-louis-days-of-net-slides</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/st-louis-days-of-net-slides</guid>
+			<pubDate>Sat, 16 Nov 2013 12:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Thanks to everyone who attended my talks this weekend. The slides for my &lt;a href="http://www.stldodn.com/2013/speakers/josh-gillespie"&gt;STLDODN talks&lt;/a&gt; are up on &lt;a href="http://www.slideshare.net/JoshGillespie2"&gt;SlideShare&lt;/a&gt; and the demo code is at  &lt;a href="https://github.com/jcgillespie/Demos"&gt;GitHub&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="http://www.slideshare.net/slideshow/embed_code/28316667?rel=0" width="600" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen=""&gt; &lt;/iframe&gt; &lt;div style="margin-bottom:5px"&gt;  &lt;a href="https://www.slideshare.net/JoshGillespie2/dude-i-just-stepped-into-your-code" title="Dude, I just stepped into your code" target="_blank"&gt;Dude, I just stepped into your code&lt;/a&gt;  from &lt;a href="http://www.slideshare.net/JoshGillespie2" target="_blank"&gt;Josh Gillespie&lt;/a&gt; &lt;/div&gt;
-&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/28394764?rel=0" width="600" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen=""&gt; &lt;/iframe&gt; &lt;div style="margin-bottom:5px"&gt; &lt;a href="http://www.slideshare.net/JoshGillespie2/stldodn-unit-testingintropics-28394764" title="A Pragmatic Introduction to Unit Testing" target="_blank"&gt;A Pragmatic Introduction to Unit Testing&lt;/a&gt; from &lt;a href="http://www.slideshare.net/JoshGillespie2" target="_blank"&gt;Josh Gillespie&lt;/a&gt; &lt;/div&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/css-px-arent-pixels" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/css-px-arent-pixels</id>
-		<title>CSS px aren't pixels</title>
-		<updated>2013-11-04T08:14:00Z</updated>
-		<content>&lt;p&gt;&lt;a href="http://inamidst.com/stuff/notes/csspx"&gt;This&lt;/a&gt; is  fascinating. Px is an angular measurement, convertible from radians.&lt;/p&gt;
+&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/28394764?rel=0" width="600" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen=""&gt; &lt;/iframe&gt; &lt;div style="margin-bottom:5px"&gt; &lt;a href="http://www.slideshare.net/JoshGillespie2/stldodn-unit-testingintropics-28394764" title="A Pragmatic Introduction to Unit Testing" target="_blank"&gt;A Pragmatic Introduction to Unit Testing&lt;/a&gt; from &lt;a href="http://www.slideshare.net/JoshGillespie2" target="_blank"&gt;Josh Gillespie&lt;/a&gt; &lt;/div&gt;</content:encoded>
+		</item>
+		<item>
+			<title>CSS px aren't pixels</title>
+			<link>https://blog.awaitwisdom.com/posts/css-px-arent-pixels</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/css-px-arent-pixels</guid>
+			<pubDate>Mon, 04 Nov 2013 08:14:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;a href="http://inamidst.com/stuff/notes/csspx"&gt;This&lt;/a&gt; is  fascinating. Px is an angular measurement, convertible from radians.&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;The moon from earth is about 24.3px wide, for example. The Eiffel Tower from a mile away is about 550.5px tall. That means that when you do “{ width: 24.3px }” in CSS 2.1, you're making something as wide as the moon looks to be.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;All these years of web slinging and I always thought it meant "pixels".&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-	<entry>
-		<link href="https://blog.awaitwisdom.com/posts/stldodn-2013" />
-		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
-		<id>https://blog.awaitwisdom.com/posts/stldodn-2013</id>
-		<title>St. Louis Days of .NET 2013</title>
-		<updated>2013-10-27T07:28:00Z</updated>
-		<content>&lt;p&gt;St. Louis Days of .NET (STLDODN) 2013 is fast approaching. &lt;a href="http://polarissolutions.com"&gt;Polaris Solutions&lt;/a&gt; is a &lt;a href=""&gt;sponsor&lt;/a&gt; this year and I'll be presenting there with two of my colleagues.&lt;/p&gt;
+&lt;p&gt;All these years of web slinging and I always thought it meant "pixels".&lt;/p&gt;</content:encoded>
+		</item>
+		<item>
+			<title>St. Louis Days of .NET 2013</title>
+			<link>https://blog.awaitwisdom.com/posts/stldodn-2013</link>
+			<description>await Wisdom()</description>
+			<enclosure url="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" length="0" type="image" />
+			<guid>https://blog.awaitwisdom.com/posts/stldodn-2013</guid>
+			<pubDate>Sun, 27 Oct 2013 07:28:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;St. Louis Days of .NET (STLDODN) 2013 is fast approaching. &lt;a href="http://polarissolutions.com"&gt;Polaris Solutions&lt;/a&gt; is a &lt;a href=""&gt;sponsor&lt;/a&gt; this year and I'll be presenting there with two of my colleagues.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.tfswhisperer.com/"&gt;Angela Dugan&lt;/a&gt; is presenting &lt;a href="http://www.stldodn.com/2013/presentation-agile-testing-in-a-waterfall-world"&gt;Agile Testing in a Waterfall World&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.notsotrivial.net/"&gt;Clint Edmonson&lt;/a&gt; will present an &lt;a href="http://www.stldodn.com/2013/application-architecture-jumpstart"&gt;Application Architecture Jumpstart&lt;/a&gt; and &lt;a href="http://www.stldodn.com/2013/advanced-oop---laws-principles-idioms"&gt;Advanced OOP - Laws, Principles, Idioms&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I'm going to be walking through &lt;a href="http://www.stldodn.com/2013/a-pragmatic-intro-to-unit-testing"&gt;A Pragmatic Intro to Unit Testing&lt;/a&gt;. Then I'll have some fun talking about code smells and refactoring patterns with  &lt;a href="http://www.stldodn.com/2013/dude-i-just-stepped-into-your-code"&gt;Dude, I Just Stepped into your Code&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;So check out &lt;a href="http://www.stldodn.com/2013/what-is-the-day-of-.net"&gt;check out STLDODN&lt;/a&gt; to get signed up and be sure to check us out. The &lt;a href="http://www.stldodn.com/2013/agenda"&gt;detailed agenda&lt;/a&gt; isn't posted yet, but should be available soon.&lt;/p&gt;</content>
-		<summary>await Wisdom()</summary>
-	</entry>
-</feed>
+&lt;p&gt;So check out &lt;a href="http://www.stldodn.com/2013/what-is-the-day-of-.net"&gt;check out STLDODN&lt;/a&gt; to get signed up and be sure to check us out. The &lt;a href="http://www.stldodn.com/2013/agenda"&gt;detailed agenda&lt;/a&gt; isn't posted yet, but should be available soon.&lt;/p&gt;</content:encoded>
+		</item>
+	</channel>
+</rss>
