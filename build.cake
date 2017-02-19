@@ -23,6 +23,8 @@ Task("Build")
             UpdatePackages = true,
             OutputPath = output
         });        
+        var cname = File(output+"/CNAME");
+        FileWriteText(cname, "blog.awaitWisdom.com");
     });
     
 Task("Preview")
@@ -46,29 +48,12 @@ Task("Debug")
             "-a \"../Wyam/src/**/bin/Debug/*.dll\" -r \"blog -i\" -t \"../Wyam/themes/Blog/CleanBlog\" -p --attach");
     });
 
-Task("Deploy")
-    .Does(() =>
-    {
-        var token = EnvironmentVariable("access_token");
-        var cname = File(output+"/CNAME");
-        FileWriteText(cname, "blog.awaitWisdom.com");
-        var repo = DirectoryPath.FromString(".");
-        GitAddAll(repo);
-        GitCommit(repo, "jcgillespie", "jcgillespie@users.noreply.github.com", "Commit from AppVeyor");
-        GitLogTip(repo);
-        GitPush(repo, token, "", "master");
-    });
-    
 //////////////////////////////////////////////////////////////////////
 // TASK TARGETS
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
     .IsDependentOn("Preview");    
-    
-Task("AppVeyor")
-    .IsDependentOn("Build")
-    .IsDependentOn("Deploy");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
