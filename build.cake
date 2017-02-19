@@ -23,6 +23,7 @@ Task("Build")
             UpdatePackages = true,
             OutputPath = output
         });        
+        
         var cname = File(output+"/CNAME");
         FileWriteText(cname, "blog.awaitWisdom.com");
     });
@@ -38,7 +39,10 @@ Task("Preview")
             Preview = true,
             Watch = true,
             OutputPath = output
-        });        
+        });
+
+        var cname = File(output+"/CNAME");
+        FileWriteText(cname, "blog.awaitWisdom.com");
     });
 
 Task("Debug")
