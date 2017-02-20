@@ -4,9 +4,33 @@
 	<id>https://blog.awaitwisdom.com/</id>
 	<title>await Wisdom()</title>
 	<rights>2017</rights>
-	<updated>2017-02-19T21:51:12Z</updated>
+	<updated>2017-02-20T16:37:55Z</updated>
 	<logo>https://blog.awaitwisdom.com/assets/img/Cursor.jpg</logo>
 	<subtitle>await Wisdom()</subtitle>
+	<entry>
+		<link href="https://blog.awaitwisdom.com/posts/effectiveness-and-efficiency" />
+		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
+		<id>https://blog.awaitwisdom.com/posts/effectiveness-and-efficiency</id>
+		<title>Effectiveness and Efficiency</title>
+		<updated>2017-02-20T08:02:18Z</updated>
+		<content>&lt;p&gt;Lately, I've found myself thinking a lot about productivity and progress. Both personally and professionally, I am trying to pursue progress before productivity.&lt;/p&gt;
+&lt;h2 id="whats-the-difference"&gt;What's the difference?&lt;/h2&gt;
+&lt;p&gt;Productivity is improving your output. It is a great sprint velocity; a steeply sloped cumulative flow. Productivity is a checked off to-do list or a completed house project. Progress, on the other hand, is moving forward. It is getting closer to a goal.&lt;/p&gt;
+&lt;p&gt;Productivity is efficiency. That is, making something with a minimum of effort; the least energy, waste, and/or expense possible. It is a high ratio of output to input.&lt;/p&gt;
+&lt;p&gt;Progress is effectiveness. Effectiveness is the power or ability to accomplish a purpose. It is producing the intended result.&lt;/p&gt;
+&lt;p&gt;In short, Efficiency is doing something right. Effectiveness is doing the right thing.&lt;/p&gt;
+&lt;h2 id="productivity-is-easier"&gt;Productivity is easier&lt;/h2&gt;
+&lt;p&gt;Productivity is the easier of the two. It is easier to measure and thus easier to improve. If you can measure your inputs and outputs, you can measure efficiency. Since you can measure it, you can see improvement. Efficiency is objective; free of bias. While you can argue about what exactly gets measured, you can't argue with the measurements.&lt;/p&gt;
+&lt;p&gt;Effectiveness can be hard to measure, which makes it harder to pursue. How do I know I'm doing the right thing? It is easy to measure that I'm getting more out of my efforts. It is hard to decide if those efforts are well spent.&lt;/p&gt;
+&lt;h2 id="productivity-is-still-valuable"&gt;Productivity is still valuable&lt;/h2&gt;
+&lt;p&gt;This is not to say that productivity isn't valuable. And sometimes that simplicity &lt;em&gt;is&lt;/em&gt; the goal. For example, several years ago I made a decision to improve my health. I was very overweight and out of shape. The problem is "health" is a very difficult thing to measure. What is "healthy"? How do you pursue that? I'm a numbers person and I &lt;em&gt;needed&lt;/em&gt; to see steady, incremental improvement to keep myself motivated. I also needed it to be easy or it wouldn't happen. I decided to use weight as my metric. Perfect? Nope. Easy to measure? Yup. I started making small changes in my lifestyle to optimize around that tiny number on the scale. Weight loss itself was not the goal: health is my goal. But that measurable milestone helped me build enough momentum to tackle other aspects of my health that aren't as easy to quantify.&lt;/p&gt;
+&lt;h2 id="so-what-is-effectiveness"&gt;So what is Effectiveness?&lt;/h2&gt;
+&lt;p&gt;I find it easier to think about effectiveness by looking at how efficiency can mislead. The ease of measurement and quick feedback of improving efficiency can be seductive. It is easy to get overly focused on "what" you're measuring and lose sight of "why". Effectiveness is ensuring you are still moving towards your "why."&lt;/p&gt;
+&lt;p&gt;Seeing progress on the scale during my daily weigh-in was very rewarding (or disheartening, depending on the outcome). There were several times that I forgot that my goal was better health, not lower weight.  Thankfully, I have a support network of friends that kept me accountable. At my worst, I did some ill-planned meal skipping and didn't drink enough water. Taken to an extreme, this could have meant anorexia, diet pills, or any number of things that would have reduced my weight without improving my health. Chasing efficiency without regard for effectiveness can be counterproductive.&lt;/p&gt;
+&lt;h2 id="in-summary"&gt;In Summary&lt;/h2&gt;
+&lt;p&gt;Effectiveness is doing the right thing, which for me means remembering to look up more often to get my bearings. Am I still on the right track? I need quick feedback loops, but are they nudging me towards my longer term goals? Whereas I can often be much more productive by myself, accomplishing a task efficiently is rarely the whole goal.&lt;/p&gt;</content>
+		<summary>await Wisdom()</summary>
+	</entry>
 	<entry>
 		<link href="https://blog.awaitwisdom.com/posts/wifi-with-unifi" />
 		<link rel="enclosure" type="image" href="https://blog.awaitwisdom.com/assets/img/Cursor.jpg" />
