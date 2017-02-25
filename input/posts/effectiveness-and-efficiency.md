@@ -1,12 +1,13 @@
 Title: Effectiveness and Efficiency
 Lead: Valuing Progress over Productivity
-Created: 2017-02-19T1603:01:16.8380000-06:00
+Created: 2017-02-19T16:01:16.8380000-06:00
 Published: 2017-02-20T08:02:18.6380000-06:00
 Tags: 
  - Consulting
  - Tech
  - Life
 ---
+
 Lately, I've found myself thinking a lot about productivity and progress. Both personally and professionally, I am trying to pursue progress before productivity. 
 
 ## What's the difference?
@@ -33,3 +34,7 @@ Seeing progress on the scale during my daily weigh-in was very rewarding (or dis
 
 ## In Summary
 Effectiveness is doing the right thing, which for me means remembering to look up more often to get my bearings. Am I still on the right track? I need quick feedback loops, but are they nudging me towards my longer term goals? Whereas I can often be much more productive by myself, accomplishing a task efficiently is rarely the whole goal.
+
+**Edit**: I've posted a [recent experience][AbandoningSuccessPost] illustrating how choosing effectiveness over efficiency can create chaos in the near-term but pay out in the end. [Abandoning Success][AbandoningSuccessPost]
+
+[AbandoningSuccessPost]:./abandoning-success.html
